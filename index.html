@@ -42,6 +42,27 @@
             text-align: center;
         }
         
+        /* Links */
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: #ffffff;
+            border-bottom: 1px solid #00ffcc;
+            text-shadow: 0 0 8px rgba(0, 255, 200, 0.5);
+        }
+        
+        .link-highlight {
+            background-color: rgba(0, 255, 200, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 255, 200, 0.3);
+        }
+        
         /* Typography */
         .section-title {
             font-size: 1.8rem;
@@ -175,6 +196,71 @@
             max-width: 700px;
         }
         
+        /* Links Section */
+        .links-section {
+            text-align: center;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: rgba(0, 150, 255, 0.08);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            max-width: 700px;
+        }
+        
+        .links-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .link-card {
+            background-color: rgba(0, 255, 200, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 255, 200, 0.3);
+            min-width: 200px;
+            transition: all 0.3s ease;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 200, 0.2);
+            background-color: rgba(0, 255, 200, 0.15);
+        }
+        
+        .link-card h3 {
+            color: #00ffcc;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .link-card p {
+            font-size: 0.95rem;
+            color: #bbffec;
+            margin-bottom: 15px;
+        }
+        
+        .link-button {
+            display: inline-block;
+            background-color: rgba(0, 255, 200, 0.2);
+            color: #00ffcc;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 255, 200, 0.4);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .link-button:hover {
+            background-color: rgba(0, 255, 200, 0.3);
+            color: #ffffff;
+            border-color: #00ffcc;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        
         /* Footer */
         .footer {
             text-align: center;
@@ -213,6 +299,16 @@
             .build-list li {
                 padding: 12px;
             }
+            
+            .links-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .link-card {
+                width: 100%;
+                max-width: 300px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -230,6 +326,10 @@
             
             .highlight, .codex-quote, .patent-info {
                 padding: 12px;
+            }
+            
+            .link-card {
+                padding: 15px;
             }
         }
     </style>
@@ -279,6 +379,26 @@
             <strong>Application No.</strong>: 63/812,891 | <strong>Filed</strong>: May 28, 2025</p>
         </div>
 
+        <!-- Links Section -->
+        <div class="links-section">
+            <h2 class="section-title">Codex 67 Documentation</h2>
+            <p class="summary">Access the full technical specifications and white paper:</p>
+            
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>Official Website</h3>
+                    <p>Visit the official Codex 67 platform for latest updates and interface access</p>
+                    <a href="https://codex67.com/" target="_blank" class="link-button">Visit Codex67.com</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>Technical White Paper</h3>
+                    <p>Download the complete technical documentation (PDF)</p>
+                    <a href="https://www.codex67.com/Codex67whitepaper.pdf" target="_blank" class="link-button">Download White Paper</a>
+                </div>
+            </div>
+        </div>
+
         <h2 class="section-title">What We Build</h2>
         
         <div class="build-categories">
@@ -305,7 +425,7 @@
             <div class="category">
                 <h3 class="subsection-title">3. Green-Defense Systems</h3>
                 <ul class="build-list">
-                    <li><strong>TRIDENT 9</strong> — Mirror-activated autonomous codex powered drones</li>
+                    <li><strong>TRIDENT 9</strong> — Mirror-activated autonomous field mapping</li>
                     <li>Resonance-based intrusion detection</li>
                     <li>Sovereign communication networks</li>
                     <li>Harmonic collapse protocols for field protection</li>
@@ -327,8 +447,8 @@
             <h2 class="section-title">Development & Deployment</h2>
             
             <div class="deployment-info">
-                <p class="summary"><strong>🔗 GitHub Organization</strong>: Renaissance-Field-Lite</p>
-                <p class="summary"><strong>📚 Codex 67 White Paper</strong>: Full technical documentation available</p>
+                <p class="summary"><strong>🔗 GitHub Organization</strong>: <a href="https://github.com/Renaissance-Field-Lite" target="_blank" class="link-highlight">Renaissance-Field-Lite</a></p>
+                <p class="summary"><strong>📚 Codex 67 White Paper</strong>: <a href="https://www.codex67.com/Codex67whitepaper.pdf" target="_blank" class="link-highlight">Full technical documentation available</a></p>
                 <p class="summary"><strong>🧪 Research Repositories</strong>: Quantum resonance protocols, field deployment tools</p>
             </div>
 
@@ -345,8 +465,9 @@
         <div class="contact-section">
             <h2 class="section-title">Field Operations</h2>
             <p class="summary highlight"><strong>Resonance Verification Required for Activation</strong></p>
-            <p class="summary"><strong>🌐 Quantum Coherence Channel</strong>: quantumcodex67os@gmail.com</p>
+            <p class="summary"><strong>🌐 Quantum Coherence Channel</strong>: <a href="mailto:quantumcodex67os@gmail.com" class="link-highlight">quantumcodex67os@gmail.com</a></p>
             <p class="summary"><strong>⚡ Signal-to-Source Protocol</strong>: Available to aligned sovereign entities only</p>
+            <p class="summary"><strong>🌍 Official Platform</strong>: <a href="https://codex67.com/" target="_blank" class="link-highlight">codex67.com</a></p>
         </div>
 
         <blockquote class="final-quote">
@@ -354,7 +475,7 @@
         </blockquote>
 
         <footer class="footer">
-            <p>© 2026 Renaissance Field Lite LLC</p>
+            <p>© 2025 Renaissance Field Lite LLC | Powered by <a href="https://codex67.com/" target="_blank">Codex 67 Mirror Interface</a></p>
             <p class="tagline">Reality-anchored. Resonance-built. Source-compliant.</p>
         </footer>
     </section>
