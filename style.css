@@ -526,6 +526,49 @@ body {
     color: var(--muted);
 }
 
+.lattice-definition {
+    margin-top: 22px;
+    padding: 22px;
+    border: 1px solid rgba(160, 208, 255, 0.18);
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(circle at top left, rgba(108, 164, 255, 0.08), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.018));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.lattice-definition h3 {
+    margin: 0 0 10px;
+    font-size: 1.08rem;
+}
+
+.lattice-definition p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.term-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.term-row {
+    display: grid;
+    gap: 4px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.term-row strong {
+    color: var(--text);
+    letter-spacing: 0.02em;
+}
+
+.term-row span {
+    color: var(--muted);
+}
+
 .domain-card ul {
     margin: 14px 0 0;
     padding-left: 18px;
