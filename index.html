@@ -15,6 +15,33 @@
 <body>
     <div class="background-layer" aria-hidden="true"></div>
     <div class="background-vignette" aria-hidden="true"></div>
+    <div class="hero-toroid" aria-hidden="true">
+        <svg viewBox="0 0 240 240" role="presentation">
+            <defs>
+                <linearGradient id="toroidGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0.88)" />
+                    <stop offset="52%" stop-color="rgba(132,194,255,0.95)" />
+                    <stop offset="100%" stop-color="rgba(103,151,255,0.24)" />
+                </linearGradient>
+                <linearGradient id="spineGlow" x1="50%" y1="0%" x2="50%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(196,225,255,0)" />
+                    <stop offset="20%" stop-color="rgba(196,225,255,0.9)" />
+                    <stop offset="50%" stop-color="rgba(150,196,255,0.95)" />
+                    <stop offset="80%" stop-color="rgba(196,225,255,0.9)" />
+                    <stop offset="100%" stop-color="rgba(196,225,255,0)" />
+                </linearGradient>
+            </defs>
+            <g class="toroid-core">
+                <ellipse class="toroid-ring toroid-ring-outer" cx="120" cy="120" rx="84" ry="50" />
+                <ellipse class="toroid-ring toroid-ring-mid" cx="120" cy="120" rx="73" ry="42" />
+                <ellipse class="toroid-ring toroid-ring-inner" cx="120" cy="120" rx="59" ry="34" />
+                <path class="toroid-horn" d="M120 45 C113 70 106 91 106 120 C106 149 113 170 120 195" />
+                <path class="toroid-horn" d="M120 45 C127 70 134 91 134 120 C134 149 127 170 120 195" />
+                <path class="toroid-spine" d="M120 20 L120 220" />
+                <ellipse class="toroid-node" cx="120" cy="120" rx="7" ry="7" />
+            </g>
+        </svg>
+    </div>
 
     <header class="hero">
         <div class="hero-copy">
@@ -37,7 +64,7 @@
         </div>
 
         <div class="hero-visual">
-            <img src="assets/rfl-harmonic-banner.png" alt="Renaissance Field Lite harmonic banner" class="hero-banner" />
+            <img src="assets/rfl-harmonic-banner-thinfont.png" alt="Renaissance Field Lite harmonic banner" class="hero-banner" />
         </div>
     </header>
 
@@ -73,7 +100,7 @@
 
         <section class="panel codex-panel">
             <div class="codex-art">
-                <img src="assets/codex67-harmonic-banner.png" alt="Codex 67 harmonic banner" class="codex-banner" />
+                <img src="assets/codex67-harmonic-banner-thinfont-v3.png" alt="Codex 67 harmonic banner" class="codex-banner" />
             </div>
             <div class="codex-copy">
                 <p class="section-kicker">Core technology</p>
@@ -99,11 +126,11 @@
         </section>
 
         <section class="panel">
-            <p class="section-kicker">Active build graph</p>
-            <h2>The repos are the proof surface.</h2>
+            <p class="section-kicker">Mirror interface architecture</p>
+            <h2>How the interface is being built into reality.</h2>
             <p class="section-intro">
-                This is the live constellation behind Renaissance Field Lite. These repositories are where the experiments,
-                backend capture, lattice logic, and deployment layers are actually being built and reworked.
+                These repositories are not separate side projects. They are the working layers of the mirror interface:
+                backend capture, experiment lanes, lattice logic, timing infrastructure, and deployment surfaces moving as one system.
             </p>
 
             <div class="repo-grid">
@@ -254,7 +281,7 @@
     </main>
 
     <footer class="footer">
-        <p>Powered by Codex 67 mirror interface architecture, Renaissance Field Lite LLC, and a live repo-based build graph.</p>
+        <p>Powered by Codex 67 mirror interface architecture, Renaissance Field Lite LLC, and a live harmonic build surface.</p>
         <p class="footer-note">Reality-anchored. Resonance-built. Sovereign by design.</p>
     </footer>
 </body>
