@@ -451,6 +451,27 @@ body {
     object-position: 50% 39%;
 }
 
+.program-media--device-shot {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 50% 30%, rgba(255, 72, 72, 0.16), transparent 36%),
+        radial-gradient(circle at 50% 70%, rgba(50, 122, 255, 0.1), transparent 52%),
+        linear-gradient(180deg, rgba(10, 10, 12, 0.9), rgba(10, 10, 12, 0.98));
+}
+
+.program-media--device-shot img {
+    object-fit: contain;
+    filter: saturate(0.92) contrast(1.04) brightness(0.95);
+    opacity: 0.96;
+}
+
+.program-media--arc15-full img {
+    object-position: center center;
+}
+
 .program-media--cutout {
     display: flex;
     align-items: center;
