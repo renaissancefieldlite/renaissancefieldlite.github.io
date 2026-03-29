@@ -175,6 +175,14 @@ body {
     font-size: 1.05rem;
 }
 
+.hero-text-echo {
+    margin-top: 14px;
+    color: var(--text);
+    font-size: 0.98rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
