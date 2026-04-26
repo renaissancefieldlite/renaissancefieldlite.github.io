@@ -447,6 +447,10 @@ body {
     opacity: 0.92;
 }
 
+.program-media--dashboard img {
+    object-position: top center;
+}
+
 .program-media--bench-left img {
     object-position: 28% 42%;
 }
@@ -499,6 +503,112 @@ body {
 .domain-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 24px;
+}
+
+.evidence-panel h2 {
+    max-width: 16ch;
+}
+
+.evidence-grid,
+.outline-grid,
+.lane-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.evidence-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.outline-grid,
+.lane-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.evidence-card,
+.outline-card,
+.lane-card {
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.055), transparent 34%),
+        rgba(255, 255, 255, 0.025);
+}
+
+.evidence-card span,
+.outline-card span,
+.lane-card span {
+    display: block;
+    color: var(--soft);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    margin-bottom: 8px;
+}
+
+.evidence-card strong,
+.outline-card strong,
+.lane-card strong {
+    display: block;
+    color: var(--text);
+    font-size: 1.04rem;
+    margin-bottom: 8px;
+}
+
+.evidence-card p,
+.outline-card p,
+.lane-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.subpage-hero {
+    width: min(calc(100% - 40px), var(--max-width));
+    margin: 0 auto;
+    padding: 56px 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.subpage-hero h1 {
+    margin: 10px 0 18px;
+    max-width: 12ch;
+    font-size: clamp(2.7rem, 5vw, 5rem);
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+}
+
+.subpage-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.subpage-nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.status-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.status-strip span {
+    padding: 9px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .node-cloud {
@@ -717,7 +827,10 @@ body {
     .focus-grid,
     .program-grid,
     .domain-grid,
-    .operations-grid {
+    .operations-grid,
+    .evidence-grid,
+    .outline-grid,
+    .lane-grid {
         grid-template-columns: 1fr;
     }
 
