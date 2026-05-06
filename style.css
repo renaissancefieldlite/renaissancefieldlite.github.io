@@ -135,10 +135,11 @@ body {
 .hero {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
-    min-height: 780px;
-    padding: 56px 0 48px;
+    min-height: 720px;
+    padding: 68px clamp(24px, 4vw, 64px) 48px;
     display: block;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .hero::after {
@@ -155,7 +156,7 @@ body {
 .hero-copy {
     position: relative;
     z-index: 2;
-    max-width: 760px;
+    max-width: 720px;
 }
 
 .eyebrow,
@@ -253,14 +254,14 @@ body {
 
 .hero-visual {
     position: absolute;
-    top: 52px;
-    right: clamp(-210px, -7vw, -74px);
+    top: 38px;
+    right: clamp(-160px, -4vw, -42px);
     z-index: 0;
-    width: min(64vw, 850px);
+    width: min(54vw, 760px);
     display: flex;
     justify-content: flex-end;
     pointer-events: none;
-    opacity: 0.18;
+    opacity: 0.11;
     filter: grayscale(1) contrast(1.08);
     transform: rotate(-2deg);
 }
@@ -1030,27 +1031,30 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .hero h1,
     .panel h2 {
         max-width: none;
+    }
+
+    .hero h1 {
+        max-width: 11ch;
     }
 
     .hero-toroid {
         width: min(24vw, 180px);
         top: 16px;
         left: 10px;
-        opacity: 0.5;
+        opacity: 0.62;
     }
 
     .hero {
-        min-height: 760px;
+        min-height: 700px;
     }
 
     .hero-visual {
-        width: min(94vw, 720px);
-        top: 110px;
-        right: -280px;
-        opacity: 0.12;
+        width: min(76vw, 690px);
+        top: 76px;
+        right: -230px;
+        opacity: 0.08;
     }
 }
 
@@ -1063,7 +1067,7 @@ body {
 
     .hero {
         padding-top: 30px;
-        min-height: 760px;
+        min-height: 660px;
     }
 
     .panel {
@@ -1091,14 +1095,14 @@ body {
         width: 108px;
         top: 10px;
         left: 8px;
-        opacity: 0.34;
+        opacity: 0.5;
     }
 
     .hero-visual {
-        width: 128vw;
+        width: 118vw;
         top: 58px;
-        right: -56vw;
-        opacity: 0.09;
+        right: -62vw;
+        opacity: 0.055;
     }
 
     .hero::after {
