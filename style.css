@@ -404,6 +404,60 @@ body {
     border-color: rgba(255, 255, 255, 0.85);
 }
 
+.mira-panel h2 {
+    max-width: 19ch;
+}
+
+.mira-standards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 0;
+}
+
+.mira-standards span {
+    padding: 10px 13px;
+    border-radius: 999px;
+    border: 1px solid rgba(186, 230, 255, 0.24);
+    background: rgba(125, 214, 255, 0.06);
+    color: var(--soft);
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.mira-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.mira-card {
+    min-height: 168px;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.16);
+    background:
+        radial-gradient(circle at top left, rgba(143, 220, 255, 0.09), transparent 36%),
+        rgba(255, 255, 255, 0.028);
+}
+
+.mira-card-large {
+    grid-column: span 3;
+    min-height: auto;
+}
+
+.mira-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+.mira-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.58;
+}
+
 .focus-grid,
 .operations-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -821,6 +875,14 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .mira-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mira-card-large {
+        grid-column: span 2;
+    }
+
     .panel h2 {
         max-width: none;
     }
@@ -864,10 +926,15 @@ body {
     .program-grid,
     .domain-grid,
     .operations-grid,
+    .mira-grid,
     .evidence-grid,
     .outline-grid,
     .lane-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mira-card-large {
+        grid-column: span 1;
     }
 
     .hero-actions {
