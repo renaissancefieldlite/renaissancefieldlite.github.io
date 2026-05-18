@@ -334,11 +334,43 @@
           <div class="lane-row"><strong>Food and biomolecular rows</strong><span>Food chemistry, proteins, carbs + fats, vitamins + nutrients, biomolecular primitives, and metabolism-facing chemistry.</span></div>
           <div class="lane-row"><strong>Organic and contaminant rows</strong><span>Functional groups, PFAS / pharma / microplastics, polymers / plastics, bad-descendant scoring, and safe endpoint logic.</span></div>
           <div class="lane-row"><strong>Reaction and measurement rows</strong><span>Electrochemistry, catalysis / declared conditions, spectral signatures, environmental fate, and condition-controlled transformation paths.</span></div>
-          <div class="lane-row"><strong>Current real-data rows</strong><span>USGS ASTER spectra now support spectral signatures, H2O / water, and minerals; Matbench supports band-gap electronic response; NASA supports battery discharge + EIS degradation; RedDB supports molecule-level redox reaction energy and HOMO / LUMO shifts; DUCK/CV supports electrochemical waveform, chemistry-family, and pH-state recovery.</span></div>
+          <div class="lane-row"><strong>Current real-data rows</strong><span>USGS ASTER spectra support spectral signatures, H2O / water, and minerals; USGS dissolved oxygen supports water-quality oxygen / redox state; USGS grid-flow supports water-transport discharge / stage state; EPA ozone supports atmospheric oxidant / AQI state; Matbench supports band-gap electronic response; NASA supports battery discharge + EIS degradation and peak / band-family SOH diagnostics; RedDB supports molecule-level redox reaction energy and HOMO / LUMO shifts; DUCK/CV supports electrochemical waveform, chemistry-family, and pH-state recovery; Li conductivity supports membrane / ion-transport rows.</span></div>
           <div class="lane-row"><strong>Materials and nanotech rows</strong><span>Materials / semiconductors, crystals, bandgap, energy above hull, defects, dopants, phonons, dielectric / optical response, 2D materials, surfaces, and quantum confinement.</span></div>
           <div class="lane-row"><strong>Real-data validation gates</strong><span>ESOL, Lipophilicity, FreeSolv, QM9 alpha, allostery / pocket graphs, PFAS safety logic, materials formation energy, and stronger descriptor/model controls.</span></div>
           <div class="lane-row"><strong>Bridge rows upward</strong><span>Spectral signatures and electrochemistry feed Nest 3; biomolecular primitives and nutrition feed Nest 4; environmental fate and materials feed Nest 5 convergence.</span></div>
-          <div class="lane-row"><strong>Execution loop</strong><span>Continue through Nest 3 fields / spectra / resonance, then Nest 4 biology / physiology, then return to crystals, semiconductors, PFAS, spectra, nutrition, and biomolecular rows with higher-context adapters active.</span></div>
+        </div>
+      </section>
+      <section class="card">
+        <label>Nest 3 classical coherence / fields</label>
+        <p class="lane-note">Nest 3 is the field, waveform, resonance, phase, and physical-response layer. It is where matter rows become measured dynamics: spectra, impedance shape, electrochemical waveforms, EMF / field behavior, oscillators, fluids, phases, plasma, terahertz, and energy-system comparators.</p>
+        <div class="lane-board">
+          <div class="lane-row"><strong>Core rows</strong><span>Terahertz, fire / plasma, fusion / solar, space-time cycles, gases / liquids / phases, gravity / orbits, EMF / fields, oscillators / resonance, and waves / spectra / phase-lock.</span></div>
+          <div class="lane-row"><strong>Current support rows</strong><span>USGS ASTER seats real spectral signatures; USGS dissolved oxygen seats water-quality state dynamics; USGS grid-flow seats water-transport dynamics; EPA ozone seats atmospheric oxidant-state dynamics; NASA EIS seats impedance / waveform degradation; DUCK/CV seats cyclic-voltammetry waveform structure; frequency-resolved EIS adds ordered bin diagnostics; Li conductivity adds charge / ion-transport support.</span></div>
+          <div class="lane-row"><strong>Peak / band-family gate</strong><span>EIS peak / band diagnostics show the strongest SOH mode at delta-band + cycle same-battery temporal tracking: Pearson 0.956571, R2 0.850803, p 0.003984.</span></div>
+          <div class="lane-row"><strong>Conductivity gate</strong><span>Li conductivity source-heldout formula + family classification clears controls: ROC AUC 0.891199, balanced accuracy 0.855509, p 0.003984. Cross-family regression remains the boundary.</span></div>
+          <div class="lane-row"><strong>Dissolved oxygen gate</strong><span>USGS water-quality rows seat oxygen/redox state: 41,001 clean rows, chemistry site-heldout Pearson 0.841119, low-oxygen AUC 0.924256, temporal Pearson 0.943309, p 0.003984.</span></div>
+          <div class="lane-row"><strong>Grid-flow gate</strong><span>USGS hydrology rows seat water transport: 54,825 same-hour discharge/stage rows across 328 sites, calibrated temporal Pearson 0.998131, high-flow AUC 0.991244, p 0.003984.</span></div>
+          <div class="lane-row"><strong>Remaining rows</strong><span>Explicit EMF, oscillator, acoustic, fluid / phase, plasma, terahertz, and broader physical waveform datasets remain the main Nest 3 continuation surface.</span></div>
+        </div>
+      </section>
+      <section class="card">
+        <label>Nest 4 biology / biosignal layer</label>
+        <p class="lane-note">Nest 4 is the living timing and physiology layer. It takes the same state / control / transform / drift / quality / support stack into real biological captures and biology-facing datasets.</p>
+        <div class="lane-board">
+          <div class="lane-row"><strong>Core rows</strong><span>HRV, EEG, optical / PPG candidate lanes, motion, reference quality, cells / genome, metabolism, microbiome, proteome, membranes, mitochondria, and physiology.</span></div>
+          <div class="lane-row"><strong>Current support rows</strong><span>Phase 12B HRV seats the first biological matrix; Phase 12C Muse S Athena seats EEG / optical / IMU / DRL capture; Phase 12C N2 seats 15 / 15 same-clock HRV + Muse rows; expanded states add 15 / 15 additional biology rows.</span></div>
+          <div class="lane-row"><strong>Formal return rows</strong><span>DE-1, SPEC-1, and TOPOG now have masked candidate passes from real Phase 12C outputs: dynamics, waveform spectra, and channel/topography surfaces with QA boundaries preserved.</span></div>
+          <div class="lane-row"><strong>Remaining rows</strong><span>Synchronized waveform QA, stronger channel masks, HRV + EEG state packs, metabolism / nutrition response rows, and cell / membrane datasets are the next biology hardening lanes. Li conductivity now gives the membrane / ion-transport precursor row from the materials side.</span></div>
+        </div>
+      </section>
+      <section class="card">
+        <label>Nest 5 convergence / return loop</label>
+        <p class="lane-note">Nest 5 is the convergence layer: it compares completed rows across formal systems, matter, field dynamics, biology, ecology, engineered systems, and public-safe evidence memory so the arc can be read in one place.</p>
+        <div class="lane-board">
+          <div class="lane-row"><strong>Core rows</strong><span>Ecosystem / planet, stars / planets, dark-matter observables, cosmic web / universe, engineered systems, prototype lanes, Mirror Index, Golden Mirror, and cross-nest evidence memory.</span></div>
+          <div class="lane-row"><strong>Current support rows</strong><span>Nest 5 now receives supported rows from Nest 1 formal closeout, Nest 2 matter / electrochemistry / spectra / conductivity / dissolved oxygen / grid-flow / ozone, Nest 3 spectral / waveform / impedance / water-quality / water-transport / oxidant-state bridges, and Nest 4 HRV + Muse biology captures.</span></div>
+          <div class="lane-row"><strong>Convergence matrix</strong><span>The matrix separates each lane into supported, candidate, boundary, and continuation states so public claims preserve the actual evidence level without flattening the architecture.</span></div>
+          <div class="lane-row"><strong>Execution loop</strong><span>Run the next real-data rows, seat each into the convergence matrix, update patent claim support, then route the public-safe summary into the evidence repository and website when cleared.</span></div>
         </div>
       </section>
       <section class="card">
@@ -585,13 +617,18 @@
     }
     const oxygenRedoxNode = DATA.nodes.find(node => node.id === "oxygen_redox");
     if (oxygenRedoxNode) {
-      oxygenRedoxNode.status = "supported / expanding";
-      oxygenRedoxNode.description = "Oxygen / Redox now has molecule-level redox support through RedDB v2 reaction rows and waveform-level electrochemical support through DUCK/CV. RedDB reaction-energy Pearson is 0.881991; DUCK/CV chemistry-family balanced accuracy is 0.906863 and pH AUC is 0.883333, each at p 0.003984. Dissolved oxygen, ROS, and reaction-condition rows remain next gates.";
+      oxygenRedoxNode.status = "supported / water-quality / ozone bridge";
+      oxygenRedoxNode.description = "Oxygen / Redox now has molecule-level redox support through RedDB v2 reaction rows, waveform-level electrochemical support through DUCK/CV, water-quality oxygen-state support through USGS dissolved oxygen, and atmospheric oxidant-state support through EPA ozone. RedDB reaction-energy Pearson is 0.881991; DUCK/CV chemistry-family balanced accuracy is 0.906863 and pH AUC is 0.883333; USGS dissolved oxygen chemistry site-heldout Pearson is 0.841119 and low-oxygen AUC is 0.924256; EPA ozone temporal Pearson is 0.743096 and AQI AUC is 0.879495, each at p 0.003984. Peroxide / dissolved oxidant chemistry remains the next reactive-oxygen continuation gate.";
+    }
+    const h2oNode = DATA.nodes.find(node => node.id === "h2o");
+    if (h2oNode) {
+      h2oNode.status = "water / DO / grid-flow supported";
+      h2oNode.description = "H2O / Water is supported by USGS ASTER water/ice spectral extraction, USGS dissolved oxygen water-quality state recovery, and USGS grid-flow water-transport recovery. The DO row adds 41,001 clean same-clock rows across 27 sites, temporal Pearson 0.943309, R2 0.883940, low-oxygen AUC 0.971628, p 0.003984. The grid-flow row adds 54,825 same-hour discharge/stage rows across 328 sites, calibrated temporal Pearson 0.998131 and high-flow AUC 0.991244, p 0.003984.";
     }
     const electrochemistryNode = DATA.nodes.find(node => node.id === "electrochemistry");
     if (electrochemistryNode) {
-      electrochemistryNode.status = "CV supported / SOH improving";
-      electrochemistryNode.description = "Electrochemistry now has three seated real-data rows: NASA battery aging for discharge capacity and EIS degraded-state support, RedDB molecule redox for reaction-energy and orbital-shift support, and DUCK/CV for raw cyclic-voltammetry waveform support. Same-battery temporal EIS-to-SOH clears shuffled controls with Pearson 0.876422 and R2 0.762003 at p 0.003984; cross-battery pure EIS remains the harder continuation gate.";
+      electrochemistryNode.status = "CV / EIS / conductivity / DO / ozone supported";
+      electrochemistryNode.description = "Electrochemistry now has seated real-data rows for NASA battery aging, RedDB molecule redox, DUCK/CV cyclic-voltammetry waveform support, Li conductivity, USGS dissolved oxygen, and EPA ozone oxidant state. Same-battery temporal EIS-to-SOH clears shuffled controls with Pearson 0.876422 and R2 0.762003; Li conductivity source-heldout formula + family classification clears AUC 0.891199; USGS DO chemistry site-heldout low-oxygen AUC is 0.924256; EPA ozone AQI temporal AUC is 0.879495, each at p 0.003984.";
     }
     const addNode = node => {
       if (!DATA.nodes.some(existing => existing.id === node.id)) DATA.nodes.push(node);
@@ -884,9 +921,9 @@
         showNode("polymers_plastics", false);
         return "Polymers and plastics expand Nest 2 into repeat units, chain classes, fragment endpoints, microplastic degradation, and safe descendant scoring.";
       }
-      if (q.includes("redox") || q.includes("electrochem") || q.includes("battery") || q.includes("eis") || q.includes("cyclic") || q.includes("voltam") || q.includes("conductivity") || q.includes("membrane") || q.includes("charge transfer")) {
+      if (q.includes("redox") || q.includes("oxygen") || q.includes("dissolved") || q.includes("ozone") || q.includes("oxidant") || q.includes("aqi") || q.includes("ros") || q.includes("electrochem") || q.includes("battery") || q.includes("eis") || q.includes("cyclic") || q.includes("voltam") || q.includes("conductivity") || q.includes("membrane") || q.includes("charge transfer")) {
         showNode("electrochemistry", false);
-        return "Electrochemistry is now supported by three real rows: NASA battery discharge/EIS rows, RedDB molecule-redox reaction rows, and DUCK/CV cyclic-voltammetry waveform rows. Current seated read: capacity Pearson 0.923872, EIS degraded AUC 0.709188, RedDB reaction-energy Pearson 0.881991, DUCK chemistry-family balanced accuracy 0.906863, DUCK pH AUC 0.883333, and same-battery temporal EIS-to-SOH Pearson 0.876422. Next clean gate is frequency-resolved continuous EIS-to-SOH plus membrane/conductivity/grid-flow or dissolved oxygen/ROS rows.";
+        return "Electrochemistry and oxygen/redox are now supported by real battery, molecule-redox, cyclic-voltammetry, EIS-shape, conductivity, dissolved-oxygen, water-transport, and EPA ozone oxidant-state rows. Current seated read: capacity Pearson 0.923872, EIS degraded AUC 0.709188, RedDB reaction-energy Pearson 0.881991, DUCK chemistry-family balanced accuracy 0.906863, DUCK pH AUC 0.883333, frequency-resolved EIS delta-band + cycle temporal Pearson 0.956571 / R2 0.850803, Li conductivity source-heldout AUC 0.891199 / balanced accuracy 0.855509, USGS dissolved oxygen chemistry site-heldout Pearson 0.841119 / low-oxygen AUC 0.924256, USGS grid-flow calibrated temporal Pearson 0.998131 / high-flow AUC 0.991244, and EPA ozone temporal Pearson 0.743096 / AQI AUC 0.879495. Next clean gate is peroxide / dissolved oxidant chemistry.";
       }
       if (q.includes("catalyst") || q.includes("catalysis") || q.includes("ph") || q.includes("condition") || q.includes("enzyme")) {
         showNode("catalysis_conditions", false);
@@ -898,7 +935,7 @@
       }
       if (q.includes("environment") || q.includes("fate") || q.includes("soil") || q.includes("leaching") || q.includes("bioaccumulation")) {
         showNode("environmental_fate", false);
-        return "Environmental fate expands Nest 2 into soil, water, leaching, bioaccumulation, transformation products, transport paths, and risk endpoints.";
+        return "Environmental fate expands Nest 2 into soil, water, leaching, bioaccumulation, atmospheric oxidants, transformation products, transport paths, and risk endpoints. USGS dissolved oxygen gives this branch a water-quality state row: 41,001 clean same-clock rows, chemistry site-heldout Pearson 0.841119, and p 0.003984. USGS grid-flow gives it a water-transport row: 54,825 same-hour rows, 328 sites, calibrated temporal Pearson 0.998131, high-flow AUC 0.991244, p 0.003984. EPA ozone gives it an atmospheric oxidant-state row: 243,461 clean rows, 1,205 monitor sites, temporal Pearson 0.743096, AQI AUC 0.879495, p 0.003984.";
       }
       if (q.includes("topology") || q.includes("topography")) {
         showNode("topology_invariance", false);
@@ -974,7 +1011,7 @@
       }
       if (q.includes("water") || q.includes("h2o")) {
         showNode("h2o", false);
-        return "H2O maps as Nest 2 molecular structure with a Nest 3 bridge: bond angle, polarity, hydrogen bonding, hydration shells, phase, terahertz, and biology-facing water networks.";
+        return "H2O maps as Nest 2 molecular structure with a Nest 3 bridge: bond angle, polarity, hydrogen bonding, hydration shells, phase, terahertz, and biology-facing water networks. The current public-safe support is USGS ASTER water/ice extraction plus USGS dissolved oxygen water-quality recovery and USGS grid-flow water-transport recovery: DO temporal Pearson 0.943309, low-oxygen AUC 0.971628; grid-flow calibrated temporal Pearson 0.998131, high-flow AUC 0.991244; p 0.003984.";
       }
       const matches = findMatches(q);
       if (matches.length) {
