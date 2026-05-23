@@ -391,7 +391,9 @@ body {
 }
 
 .repo-card a,
-.operations-card a {
+.operations-card a,
+.suite-card a,
+.sheet-actions a {
     color: var(--text);
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.28);
@@ -400,8 +402,133 @@ body {
 
 .repo-card a:hover,
 .operations-card a:hover,
+.suite-card a:hover,
+.sheet-actions a:hover,
 .button:hover {
     border-color: rgba(255, 255, 255, 0.85);
+}
+
+.buildout-suite h2 {
+    max-width: 18ch;
+}
+
+.suite-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.suite-card {
+    display: grid;
+    grid-template-columns: 42% minmax(0, 1fr);
+    gap: 18px;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.14);
+    background:
+        radial-gradient(circle at top left, rgba(117, 204, 255, 0.08), transparent 38%),
+        rgba(255, 255, 255, 0.025);
+    overflow: hidden;
+}
+
+.suite-card img,
+.one-sheet-frame img {
+    width: 100%;
+    display: block;
+}
+
+.suite-card img {
+    height: 100%;
+    min-height: 150px;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    filter: saturate(0.96) contrast(1.04) brightness(0.92);
+}
+
+.suite-card span,
+.buildout-kicker {
+    display: block;
+    color: var(--soft);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.suite-card h3 {
+    margin: 8px 0 10px;
+    font-size: 1.25rem;
+    line-height: 1.05;
+}
+
+.suite-card p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.buildout-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+    gap: 28px;
+    align-items: center;
+}
+
+.buildout-hero h1 {
+    max-width: 13ch;
+}
+
+.one-sheet-frame {
+    border-radius: 24px;
+    border: 1px solid rgba(186, 230, 255, 0.15);
+    background:
+        radial-gradient(circle at top left, rgba(130, 210, 255, 0.08), transparent 34%),
+        rgba(0, 0, 0, 0.42);
+    padding: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.one-sheet-frame img {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sheet-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.product-page-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.product-page-grid .stack-list {
+    margin-top: 0;
+}
+
+.product-note {
+    padding: 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.14);
+    background:
+        radial-gradient(circle at top right, rgba(117, 204, 255, 0.08), transparent 42%),
+        rgba(255, 255, 255, 0.025);
+    color: var(--muted);
+}
+
+.product-note strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
 }
 
 .mira-panel h2 {
@@ -875,6 +1002,11 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .buildout-hero,
+    .product-page-grid {
+        grid-template-columns: 1fr;
+    }
+
     .mira-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -926,10 +1058,15 @@ body {
     .program-grid,
     .domain-grid,
     .operations-grid,
+    .suite-grid,
     .mira-grid,
     .evidence-grid,
     .outline-grid,
     .lane-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .suite-card {
         grid-template-columns: 1fr;
     }
 
