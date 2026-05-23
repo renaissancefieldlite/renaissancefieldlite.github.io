@@ -531,6 +531,66 @@ body {
     color: var(--text);
 }
 
+.proof-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+    gap: 22px;
+    align-items: center;
+}
+
+.proof-frame {
+    margin: 0;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.18);
+    background:
+        radial-gradient(circle at top left, rgba(117, 204, 255, 0.08), transparent 36%),
+        rgba(0, 0, 0, 0.48);
+    padding: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.proof-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    filter: saturate(0.94) contrast(1.05) brightness(0.9);
+}
+
+.plain-english-box,
+.product-cta {
+    border-color: rgba(186, 230, 255, 0.2);
+    background:
+        radial-gradient(circle at top left, rgba(117, 204, 255, 0.08), transparent 42%),
+        rgba(5, 21, 30, 0.72);
+}
+
+.plain-english-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.18);
+    color: var(--muted);
+}
+
+.plain-english-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.product-cta h2 {
+    max-width: 20ch;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 22px;
+}
+
 .mira-panel h2 {
     max-width: 19ch;
 }
@@ -1003,7 +1063,8 @@ body {
     }
 
     .buildout-hero,
-    .product-page-grid {
+    .product-page-grid,
+    .proof-panel {
         grid-template-columns: 1fr;
     }
 
