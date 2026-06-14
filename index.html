@@ -574,6 +574,37 @@
                     <p>Domain business mail is being brought online alongside the new site surface.</p>
                 </article>
             </div>
+            <div class="booking-strip" data-booking-url="https://cal.com/dean-patterson-xraeye?embed=true&theme=dark">
+                <div>
+                    <p class="section-kicker">Booking</p>
+                    <h3>Schedule a working session</h3>
+                    <p>
+                        Open a lightweight on-page calendar for investor, partner, research,
+                        and buildout conversations without leaving Renaissance Field Lite.
+                    </p>
+                </div>
+                <button class="button button-primary booking-toggle" type="button" data-booking-toggle aria-expanded="false" aria-controls="booking-drawer">
+                    Open booking calendar
+                </button>
+            </div>
+            <div class="booking-drawer" id="booking-drawer" hidden>
+                <div class="booking-drawer-header">
+                    <div>
+                        <p class="section-kicker">Renaissance Field Lite booking</p>
+                        <h3>Choose a time</h3>
+                    </div>
+                    <button class="button button-secondary booking-close" type="button" data-booking-close>
+                        Close
+                    </button>
+                </div>
+                <div class="booking-frame" id="booking-frame" aria-live="polite">
+                    <p class="booking-loading">Loading scheduler...</p>
+                </div>
+                <p class="booking-fallback">
+                    If the scheduler does not load, email
+                    <a href="mailto:info@renaissancefieldlite.com">info@renaissancefieldlite.com</a>.
+                </p>
+            </div>
         </section>
     </main>
 
@@ -582,5 +613,53 @@
         <p class="footer-note">Renaissance Field Lite is both a name and an operator demand: become broad enough to meet the convergence.</p>
         <p class="footer-note">Reality-anchored. Resonance-built. Sovereign by design.</p>
     </footer>
+    <script>
+        (() => {
+            const bookingStrip = document.querySelector("[data-booking-url]");
+            const openButton = document.querySelector("[data-booking-toggle]");
+            const closeButton = document.querySelector("[data-booking-close]");
+            const drawer = document.getElementById("booking-drawer");
+            const frame = document.getElementById("booking-frame");
+
+            if (!bookingStrip || !openButton || !closeButton || !drawer || !frame) {
+                return;
+            }
+
+            const bookingUrl = bookingStrip.dataset.bookingUrl;
+            let schedulerLoaded = false;
+
+            const loadScheduler = () => {
+                if (schedulerLoaded) {
+                    return;
+                }
+                schedulerLoaded = true;
+
+                const scheduler = document.createElement("iframe");
+                scheduler.title = "Renaissance Field Lite booking calendar";
+                scheduler.src = bookingUrl;
+                scheduler.loading = "lazy";
+                scheduler.referrerPolicy = "strict-origin-when-cross-origin";
+
+                frame.innerHTML = "";
+                frame.appendChild(scheduler);
+            };
+
+            const openBooking = () => {
+                drawer.hidden = false;
+                openButton.setAttribute("aria-expanded", "true");
+                loadScheduler();
+                drawer.scrollIntoView({ behavior: "smooth", block: "start" });
+            };
+
+            const closeBooking = () => {
+                drawer.hidden = true;
+                openButton.setAttribute("aria-expanded", "false");
+                openButton.focus({ preventScroll: true });
+            };
+
+            openButton.addEventListener("click", openBooking);
+            closeButton.addEventListener("click", closeBooking);
+        })();
+    </script>
 </body>
 </html>

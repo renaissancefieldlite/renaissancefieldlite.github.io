@@ -923,6 +923,96 @@ body {
     max-width: 12ch;
 }
 
+.booking-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-top: 24px;
+    padding: 22px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.22);
+    background:
+        radial-gradient(circle at top left, rgba(117, 204, 255, 0.1), transparent 38%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.booking-strip h3,
+.booking-drawer h3 {
+    margin: 6px 0 8px;
+    font-size: 1.28rem;
+}
+
+.booking-strip p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.booking-toggle,
+.booking-close {
+    font: inherit;
+    cursor: pointer;
+}
+
+.booking-drawer {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(186, 230, 255, 0.2);
+    background:
+        radial-gradient(circle at top right, rgba(117, 204, 255, 0.08), transparent 42%),
+        rgba(0, 0, 0, 0.56);
+}
+
+.booking-drawer[hidden] {
+    display: none;
+}
+
+.booking-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.booking-frame {
+    width: 100%;
+    min-width: 320px;
+    min-height: 560px;
+    height: min(680px, 78vh);
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+        radial-gradient(circle at top, rgba(186, 230, 255, 0.18), transparent 34%),
+        #f6f7fb;
+}
+
+.booking-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.booking-loading {
+    margin: 0;
+    padding: 24px;
+    color: #111827;
+}
+
+.booking-fallback {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.booking-fallback a {
+    color: var(--text);
+}
+
 .footer {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
@@ -1138,6 +1228,22 @@ body {
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .booking-strip,
+    .booking-drawer-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .booking-toggle,
+    .booking-close {
+        width: 100%;
+    }
+
+    .booking-frame {
+        min-height: 620px;
+        height: 72vh;
     }
 
     .hero-toroid {
