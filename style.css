@@ -1013,6 +1013,20 @@ body {
     color: var(--text);
 }
 
+.calendar-redirect-page {
+    min-height: 100vh;
+    align-content: center;
+    padding-top: 60px;
+}
+
+.calendar-redirect-panel h1 {
+    margin: 12px 0 14px;
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    max-width: 11ch;
+}
+
 .footer {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
