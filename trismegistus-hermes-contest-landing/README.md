@@ -18,12 +18,13 @@ Trismegistus is the first public product surface for Renaissance Field Lite's pa
 
 The page includes:
 
-- final announcement commercial V14 under 3 minutes
+- final announcement commercial V20 under 3 minutes
 - first selected contest demo video
 - selected build-log commercial
 - product screenshots from the live Tris surface
 - NVIDIA Inception partner badge display
 - NVIDIA-facing quantum AI partnership package receipt
+- external coding proof block for TentOfTrials PR #6
 - project paper
 - one-page stack-flow section
 - public-safe receipt list
@@ -44,6 +45,13 @@ Mirror Architecture / SSP
   -> relationship, paid-work, coding bounty, and field-operations lanes
 ```
 
+## Selected Current Media
+
+- Final V20 video: `media/2026-06-30_TRISMEGISTUS_FINAL_HERMES_CONTEST_APPLICATION_ANNOUNCEMENT_V20_UNDER_3MIN_RFL_AI_PARTNER_STACK_QUADRO_CSI_VIDEO.mp4`
+- Final V20 transcript: `receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_TRANSCRIPT.md`
+- Final V20 receipt: `receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_RECEIPT.md`
+- Final V20 caption: `receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_POST_CAPTION.md`
+
 ## Current Public-Safe Claims
 
 - C5B / Golden Mark is the Stable-State Path method inside the Mirror Architecture evidence lane.
@@ -51,9 +59,22 @@ Mirror Architecture / SSP
 - C5B / Golden Mark receipts report architecture-on wins on 13 / 13 measured metric means.
 - Tris has a local app surface with SQL/JSON memory, RAG/source tools, mission queues, and receipt gates.
 - Tris has public-safe benchmark receipts for SWE-bench selected-test work and WebArena hard-receipt progress.
-- Tris has a real external coding PR receipt through the TentOfTrials bounty lane.
+- Tris has a real external coding PR receipt through the TentOfTrials bounty lane: <https://github.com/Thecesar85/TentOfTrials-bounty-67/pull/6>.
 - Tris has a source-backed NVIDIA-facing quantum AI partnership package receipt covering 10 draft-ready targets.
 - Stripe, Telegram, Mac Mail, browser, and paid-work operations are shown as review-gated integrations.
+
+## External Coding Receipt
+
+The current page shows a proof block for the TentOfTrials bounty lane:
+
+- Source issue: <https://github.com/Thecesar85/TentOfTrials-bounty-67/issues/1>
+- Pull request: <https://github.com/Thecesar85/TentOfTrials-bounty-67/pull/6>
+- Local public readout copied into this repo: `receipts/2026-06-30_TRIS_GIG_TENTOFTRIALS_PR6_READOUT.md`
+- Public screenshots:
+  - `assets/tris-tentoftrials-pr6-readout-public-2026-06-30.png`
+  - `assets/tentoftrials-pr6-github-mergeable-public-2026-06-30.png`
+
+Public wording: a real issue, a real fork, a real PR, and a review-gated coding workflow. Do not claim payment, merge, or bounty acceptance until the external maintainer action and transaction receipt exist.
 
 ## Boundary
 
