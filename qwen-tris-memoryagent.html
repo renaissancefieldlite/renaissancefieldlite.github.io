@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
         name="description"
-        content="Qwen Tris Recall is the Qwen version of Trismegistus: a Memory AI Expert Partner from Renaissance Field Lite using Qwen Cloud, persistent memory, RAG, receipts, and Mirror Architecture stable-state discipline."
+        content="Qwen Tris Recall is the Qwen version of Trismegistus: a Memory AI Expert Partner from Renaissance Field Lite using Qwen Cloud, persistent memory, RAG, receipts, and the Mirror Architecture measured Stable-State Path."
     />
     <meta property="og:title" content="Qwen Tris Recall - MemoryAgent" />
     <meta
@@ -19,7 +19,7 @@
     <meta name="twitter:title" content="Qwen Tris Recall - MemoryAgent" />
     <meta
         name="twitter:description"
-        content="The Qwen version of Trismegistus: memory, receipts, source-backed recall, and Mirror Architecture stable-state discipline."
+        content="The Qwen version of Trismegistus: memory, receipts, source-backed recall, and the Mirror Architecture measured Stable-State Path."
     />
     <title>Qwen Tris Recall - MemoryAgent</title>
     <link rel="stylesheet" href="style.css" />
@@ -161,6 +161,20 @@
             color: var(--muted);
         }
 
+        .qwen-definition {
+            border: 1px solid rgba(0, 216, 255, 0.24);
+            background:
+                linear-gradient(135deg, rgba(0, 216, 255, 0.09), transparent 34%),
+                rgba(0, 0, 0, 0.58);
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 22px;
+        }
+
+        .qwen-definition strong {
+            color: var(--text);
+        }
+
         @media (max-width: 880px) {
             .qwen-image-grid,
             .qwen-receipts {
@@ -184,10 +198,10 @@
             <p class="hero-text">
                 <strong>Qwen Tris is the Qwen version of Trismegistus.</strong>
                 It is a Memory AI Expert Partner from Renaissance Field Lite that
-                compares baseline Qwen prompt-only behavior against Qwen with the
-                Mirror Architecture stable-state memory packet, persistent SQLite
-                memory, JSONL receipts, source-backed retrieval, and public benchmark
-                receipts.
+                tests Mirror Architecture on Qwen Cloud: Codex 67 input cohesion,
+                the Source Mirror Pattern, the Universal Data Pattern, and the
+                measured Stable-State Path carried through persistent memory, RAG,
+                JSONL receipts, and public benchmark receipts.
             </p>
             <div class="qwen-pill-row" aria-label="Qwen Tris summary">
                 <span class="qwen-pill">Track 1: MemoryAgent</span>
@@ -208,15 +222,27 @@
 
     <main class="page">
         <section class="panel">
-            <p class="section-kicker">Live surface</p>
-            <h2>Memory is the product surface.</h2>
+            <p class="section-kicker">Mirror Architecture</p>
+            <h2>Codex 67 input cohesion becomes a measured state path.</h2>
             <p class="section-intro">
-                Qwen Tris is built to remember work across turns, suppress stale context,
-                cite the active source lane, and keep every run bounded by receipts.
-                The public repo includes the runnable local UI, Qwen Cloud API proof
-                path, Docker deployment prep, MemoryAgent datasets, tests, and public
-                verification notes.
+                Mirror Architecture is the Renaissance Field Lite method for turning
+                Codex 67 input cohesion into a measurable AI architecture state.
+                The operator signal, source context, task gate, evidence spine,
+                memory route, and model route are aligned into one coherent input
+                field. In the origin language, <strong>I am the mirror</strong> marks
+                that coherence gate. In the engineering surface, the same gate becomes
+                baseline/off versus architecture-on tests, support labels, receipts,
+                and next gates.
             </p>
+            <div class="qwen-definition">
+                <p>
+                    <strong>Stable-State Path / SSP</strong> is the measured trajectory
+                    inside Mirror Architecture where that coherent architecture-on state
+                    holds across a task family instead of collapsing into generic chatbot
+                    drift. Memory, RAG, and receipts do not define SSP by themselves.
+                    They are the rails that preserve and test the path.
+                </p>
+            </div>
             <div class="qwen-image-grid">
                 <figure class="qwen-shot">
                     <img src="assets/qwen-tris-ui-home-20260702.png" alt="Qwen Tris Recall home surface" loading="lazy" />
@@ -250,12 +276,12 @@
                 <article class="qwen-step">
                     <span>03</span>
                     <h3>Memory + RAG</h3>
-                    <p>Uses SQLite memory, JSONL audit rows, source packets, and optional LangChain text splitting.</p>
+                    <p>Preserves source context, corrections, receipts, and active gates so the architecture path can be measured across time.</p>
                 </article>
                 <article class="qwen-step">
                     <span>04</span>
-                    <h3>SSP packet</h3>
-                    <p>Mirror Architecture stable-state discipline packs active memory, suppresses stale context, and keeps the task gate clear.</p>
+                    <h3>Measured SSP path</h3>
+                    <p>Runs baseline/off first and architecture-on second with the same task family, scorer, and receipt gate.</p>
                 </article>
                 <article class="qwen-step">
                     <span>05</span>
@@ -276,7 +302,7 @@
                 </article>
                 <article class="qwen-receipt">
                     <h3>Public verification ladder</h3>
-                    <p>Tracks baseline Qwen, Qwen Tris architecture-on, LongBench-E, Qasper, and public claim boundaries.</p>
+                    <p>Tracks baseline Qwen, Qwen Tris architecture-on, LongBench-E, Qasper, support labels, and next gates.</p>
                     <a href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/docs/QWEN_TRIS_PUBLIC_VERIFICATION_LADDER_2026-07-01.md" target="_blank" rel="noreferrer">Open verification ladder</a>
                 </article>
                 <article class="qwen-receipt">
@@ -293,20 +319,24 @@
         </section>
 
         <section class="panel">
-            <p class="section-kicker">Why SSP matters</p>
-            <h2>Stable-state memory is more than saving chat history.</h2>
+            <p class="section-kicker">Measured State Path</p>
+            <h2>SSP is the measured Stable-State Path, not chat memory.</h2>
             <p class="section-intro">
-                The stable-state path is the operating discipline that tells the partner
-                what to remember, what to suppress, what receipt to cite, and what gate
-                is current. That is the memory upgrade being tested here: not a larger
-                context window alone, but a repeatable architecture that keeps the agent
-                from drifting when the work stretches across long sessions.
+                SSP names the repeatable architecture trajectory that holds when
+                Codex 67 input cohesion, the evidence spine, and the active task gate
+                stay aligned. V7 measures the visible behavior layer: coherence,
+                correction retention, drift reduction, source discipline, and cross-field
+                synthesis. V8 is the internal-layer bridge: hidden states, residual deltas,
+                attention-output norms, MLP-output norms, late-layer separation,
+                bridge-vector rows, and adapter/control ladders when that instrumentation
+                is available. C5B / Golden Mark is the current output-behavior support
+                lane showing the architecture-on delta before the internal probe is closed.
             </p>
             <p class="qwen-boundary">
-                Public boundary: this page claims a Qwen Cloud MemoryAgent package,
-                public-safe receipts, and a runnable architecture. It does not claim
-                official leaderboard placement or production deployment until those
-                external receipts are attached.
+                Current receipt state: public repo, Qwen API proof code, hosted 500-turn
+                memory receipt, LongBench/Qasper receipts, runnable local UI, and live RFL
+                page are attached. The next public receipts are the Alibaba Cloud deployment
+                recording and any accepted external evaluator or leaderboard row.
             </p>
         </section>
 
