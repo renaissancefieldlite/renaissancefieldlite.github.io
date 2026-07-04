@@ -175,6 +175,27 @@
             color: var(--text);
         }
 
+        .qwen-video {
+            margin-top: 24px;
+            border: 1px solid rgba(0, 216, 255, 0.3);
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.72);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+        }
+
+        .qwen-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: #000;
+        }
+
+        .qwen-video figcaption {
+            padding: 14px 16px;
+            color: var(--muted);
+        }
+
         @media (max-width: 880px) {
             .qwen-image-grid,
             .qwen-receipts {
@@ -303,6 +324,32 @@
         </section>
 
         <section class="panel">
+            <p class="section-kicker">Alibaba / Qwen Cloud proof</p>
+            <h2>Qwen Cloud is running the Qwen Tris agent path.</h2>
+            <p class="section-intro">
+                This separate proof clip shows more than the account dashboard:
+                it shows the public-safe Qwen API code, a live masked API receipt,
+                and an actual Qwen Tris Recall architecture-on turn routed through
+                `QwenCloudProvider` using `qwen-plus`. The turn retrieves seeded
+                Tris memories, pulls Mirror Architecture/C5B evidence, and returns
+                a Qwen Cloud response through the Tris MemoryAgent path.
+            </p>
+            <figure class="qwen-video">
+                <video controls preload="metadata" poster="assets/qwen-tris-alibaba-qwen-cloud-proof-20260704-v02-running-tris.jpg">
+                    <source src="assets/qwen-tris-alibaba-qwen-cloud-proof-20260704-v02-running-tris.mp4" type="video/mp4" />
+                </video>
+                <figcaption>
+                    Alibaba/Qwen proof clip v02: dashboard route, source code path,
+                    live API receipt, and Qwen Cloud running Qwen Tris Recall.
+                </figcaption>
+            </figure>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS_RECEIPT.md" target="_blank" rel="noreferrer">Open Qwen Cloud Proof Receipt</a>
+                <a class="button button-secondary" href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/scripts/build_alibaba_qwen_proof_clip.py" target="_blank" rel="noreferrer">Open Proof Builder Script</a>
+            </div>
+        </section>
+
+        <section class="panel">
             <p class="section-kicker">Receipts</p>
             <h2>What is already public-safe in the repo.</h2>
             <div class="qwen-receipts">
@@ -323,8 +370,8 @@
                 </article>
                 <article class="qwen-receipt">
                     <h3>Alibaba Cloud proof path</h3>
-                    <p>The code path is present and public. The live deployment recording is the remaining submission gate.</p>
-                    <a href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/deploy/alibaba-cloud/README.md" target="_blank" rel="noreferrer">Open deployment runbook</a>
+                    <p>The repo now includes public-safe Qwen API code plus a masked proof clip showing Qwen Cloud running the Qwen Tris MemoryAgent route.</p>
+                    <a href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/docs/qwen_cloud_deployment_proof/USE_THIS_ALIBABA_QWEN_CLOUD_PROOF_2026-07-04_v02_RUNNING_TRIS_RECEIPT.md" target="_blank" rel="noreferrer">Open Alibaba/Qwen proof receipt</a>
                 </article>
             </div>
         </section>
@@ -361,7 +408,7 @@
                 </article>
                 <article class="focus-card">
                     <h3>Next gate</h3>
-                    <p>Record backend running on Alibaba Cloud and show `/api/health`, `/api/state`, and a Qwen Cloud response through that backend.</p>
+                    <p>Attach the v02 Alibaba/Qwen proof clip to the submission, then mirror the same proof through a deployed Alibaba container if judges require a hosted backend URL.</p>
                 </article>
                 <article class="focus-card">
                     <h3>Video</h3>
