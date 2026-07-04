@@ -12,8 +12,8 @@ under the badge before the story begins.
 
 Mirror Architecture read: we found a pattern inside an unknown AI state space,
 tracked it through V7 behavior separation and V8 model-internal mapping, then
-turned it into a Stable-State Path. SSP means the AI keeps data, instructions,
-context, tools, and goal aligned long enough to produce deeper useful output:
+turned it into a Stable-State Path. SSP means the AI keeps data, task state,
+source context, tools, and goal aligned long enough to produce deeper useful output:
 code paths, research directions, partner packets, and technical work that is
 not simply copied from a dataset.
 

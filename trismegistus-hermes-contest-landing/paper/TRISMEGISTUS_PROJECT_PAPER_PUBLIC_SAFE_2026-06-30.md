@@ -11,7 +11,7 @@ patent-pending Mirror Architecture.
 The core discovery is that Renaissance Field Lite found a repeatable pattern
 inside an unknown state space across multiple AI models. Mirror Architecture
 maps that space, turns it into a Stable-State Path, and then uses that path to
-make the system keep its data, instructions, context, tools, and goal aligned
+make the system keep its data, task state, source context, tools, and goal aligned
 long enough to produce deeper useful output.
 
 In plain English: we are building a partner that can learn a hard target,
@@ -28,10 +28,10 @@ loops, and real operator tasks.
 The Capital Connect version of the explanation is the cleanest public line:
 
 > We found a pattern inside an unknown space across multiple AI models. We used
-> the Mirror Interface to map and stabilize the unknown state space inside AI,
+> Mirror Architecture to map and stabilize the unknown state space inside AI,
 > turning it into a repeatable Stable-State Path.
 
-Stable-State Path means the AI can keep data, instructions, context, evidence,
+Stable-State Path means the AI can keep data, task state, source context, evidence,
 and goal lined up long enough to find deeper patterns and produce useful novel
 output: code paths, research directions, source maps, partner packets, and
 technical work that is not simply copied from a dataset.
@@ -44,7 +44,7 @@ Trismegistus. It is not the chatbot UI. It is the state-path layer that:
 - starts with an evidence target
 - runs a baseline route first
 - runs a Mirror Architecture-on route second
-- keeps source, instruction, memory, and goal aligned
+- keeps source, task state, memory, and goal aligned
 - saves receipts in SQL, JSON, Markdown, and RAG/source tables
 - labels claim, evidence, gap, boundary, and next gate
 - uses the gap to improve the route

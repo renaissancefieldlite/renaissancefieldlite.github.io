@@ -18,7 +18,7 @@ contest sprint. The system went from demo surface to real benchmark receipts:
   parser, output-credit, or environment-boundary cases.
 - WebArena Verified hard receipt: `255/258`, with final rows parked for
   maintainer or contest response.
-- Tris 100-turn architecture-on coherence pass: `436/436` checks, mean score
+- Tris 100-turn architecture-on context pass: `436/436` checks, mean score
   `1.0`, zero prompt spills, zero raw receipt spills.
 - Baseline versus architecture-on slice: baseline mean `0.792`, architecture-on
   Tris mean `1.0`, delta `+0.208`.
@@ -67,4 +67,3 @@ a respected benchmark lane, organize a recursive repair process, preserve the
 receipts, attempt official hosted scoring, and handle the evaluator boundary in
 a professional way. That is the road toward an advanced recursive AI expert
 partner: measurable improvement, source-backed work, and honest gates.
-
