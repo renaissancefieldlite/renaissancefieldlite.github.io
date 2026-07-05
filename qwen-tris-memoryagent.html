@@ -333,6 +333,20 @@
                     reduction against the baseline.
                 </p>
             </div>
+            <div class="qwen-definition">
+                <p>
+                    <strong>Why this matters for novel output:</strong> Hermes Tris
+                    already showed the end-state direction. In the C5B / Golden Mark
+                    lane, baseline Hermes and the architecture-on route ran the same
+                    task family under the same scorer. The architecture-on route won
+                    13/13 metric means, moved drift flags from 37 to 0, and moved
+                    evidence failures from 5 to 0. Qwen Tris carries that result into
+                    the memory track: not just remembering old text, but preserving
+                    enough source context, correction history, and task state for the
+                    AI Expert Partner to keep producing the next useful step instead
+                    of collapsing back into generic chat drift.
+                </p>
+            </div>
             <figure class="qwen-architecture-figure">
                 <img src="assets/qwen-tris-architecture-diagram-20260705.png" alt="Qwen Tris architecture diagram connecting the UI, Python backend, Mirror Architecture, memory store, source retrieval, receipts, local fallback, and Qwen Cloud" loading="lazy" />
                 <figcaption>Compact architecture diagram: Qwen Tris routes the user surface through the Python backend, Mirror Architecture SSP rails, memory and source retrieval, audit receipts, local fallback, and Qwen Cloud.</figcaption>
@@ -419,6 +433,11 @@
                     <h3>Hosted Qwen memory run</h3>
                     <p>Condition B, Qwen plus Mirror Architecture measured SSP with memory/RAG rails, passed the hosted 500-turn memory slice.</p>
                     <a href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/data/memory_iteration_runs/qwen_tris_three_condition_iterations_20260701T054449Z.md" target="_blank" rel="noreferrer">Open 500-turn receipt</a>
+                </article>
+                <article class="qwen-receipt">
+                    <h3>Hermes Tris prior result</h3>
+                    <p>C5B / Golden Mark showed the architecture-on route beating baseline Hermes across the same 100-turn task family: 13/13 metric means won, drift flags 37 -> 0, evidence failures 5 -> 0.</p>
+                    <a href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/docs/TRINI_RECALL_C5B_ITER_STACK_PROFILE.md" target="_blank" rel="noreferrer">Open C5B support read</a>
                 </article>
                 <article class="qwen-receipt">
                     <h3>Public verification ladder</h3>
