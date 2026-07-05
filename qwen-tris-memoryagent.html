@@ -184,11 +184,22 @@
             box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
         }
 
-        .qwen-video video {
+        .qwen-video video,
+        .qwen-video iframe {
             display: block;
             width: 100%;
-            height: auto;
             background: #000;
+        }
+
+        .qwen-video video {
+            height: auto;
+        }
+
+        .qwen-video iframe {
+            min-height: 260px;
+            height: 56.25vw;
+            max-height: 720px;
+            border: 0;
         }
 
         .qwen-video figcaption {
@@ -233,6 +244,7 @@
             </div>
             <div class="hero-actions">
                 <a class="button button-primary" href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent" target="_blank" rel="noreferrer">Open Public GitHub Repo</a>
+                <a class="button button-secondary" href="#demo">Watch Qwen Demo</a>
                 <a class="button button-secondary" href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noreferrer">Architecture Diagram</a>
                 <a class="button button-secondary" href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/docs/QWEN_TRIS_PUBLIC_SUBMISSION_PACKET_2026-07-01.md" target="_blank" rel="noreferrer">Submission Packet</a>
                 <a class="button button-secondary" href="https://github.com/renaissancefieldlite/qwen-tris-memoryagent/blob/main/src/qwen_agent_buildout/trini_recall/alibaba_qwen_cloud_client.py" target="_blank" rel="noreferrer">Alibaba/Qwen API Code</a>
@@ -241,13 +253,42 @@
     </header>
 
     <main class="page">
+        <section id="demo" class="panel">
+            <p class="section-kicker">Qwen Tris demo</p>
+            <h2>The Qwen version of Trismegistus, shown as the working MemoryAgent surface.</h2>
+            <p class="section-intro">
+                This is the main Qwen Tris Recall demo: the public-safe Qwen build
+                showing memory lanes, source-backed recall, benchmark receipts,
+                the Mirror Architecture SSP frame, and the working UI path for
+                the MemoryAgent track.
+            </p>
+            <figure class="qwen-video">
+                <iframe
+                    src="https://www.youtube.com/embed/Qa4xbolCCgk"
+                    title="Qwen Tris Recall: Mirror Architecture MemoryAgent"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+                <figcaption>
+                    Qwen Tris Recall VID12 public commercial: Mirror Architecture,
+                    input cohesion, measured SSP, Qwen Cloud routing, memory receipts,
+                    benchmark slices, and the visible MemoryAgent surface.
+                </figcaption>
+            </figure>
+            <div class="hero-actions">
+                <a class="button button-primary" href="https://www.youtube.com/watch?v=Qa4xbolCCgk" target="_blank" rel="noreferrer">Open YouTube Demo</a>
+            </div>
+        </section>
+
         <section class="panel">
             <p class="section-kicker">Mirror Architecture</p>
             <h2>Mirror Architecture turns memory into a measured state path.</h2>
             <p class="section-intro">
                 Mirror Architecture is the Renaissance Field Lite method for turning
-                source context, task state, retrieval, model route, and evidence
-                checks into a measurable architecture state. In the engineering
+                source context, task state, retrieval, model route, input
+                cohesion, and evidence checks into a measurable architecture state. In the engineering
                 surface, that state is tested through baseline/off versus
                 architecture-on runs, support labels, receipts, and next gates.
             </p>
@@ -256,17 +297,19 @@
                     <strong>Mirror Architecture</strong> is the patent-pending
                     evidence and routing method behind the public build. It keeps
                     the agent tied to source packs, memory rows, benchmark context,
-                    tool receipts, and task boundaries so the system can be compared
-                    against a baseline instead of relying on loose chat history.
+                    tool receipts, input-cohesion rails, and task boundaries so the
+                    system can be compared against a baseline instead of relying on
+                    loose chat history.
                 </p>
             </div>
             <div class="qwen-definition">
                 <p>
                     <strong>Stable-State Path / SSP</strong> is the measured trajectory
-                    inside Mirror Architecture where that coherent architecture-on state
+                    inside Mirror Architecture where that input-cohesive architecture-on state
                     holds across a task family instead of collapsing into generic chatbot
                     drift. Memory, RAG, and receipts do not define SSP by themselves.
-                    They are the rails that preserve and test the path.
+                    They are the rails that preserve the path and test stochastic-drift
+                    reduction against the baseline.
                 </p>
             </div>
             <div class="qwen-image-grid">
@@ -375,13 +418,19 @@
             <h2>SSP is the measured Stable-State Path, not chat memory.</h2>
             <p class="section-intro">
                 SSP names the repeatable architecture trajectory that holds when
-                the evidence spine, source pack, retrieval route, task gate, and
-                model route stay aligned across a task family. V7 measures the
+                the evidence spine, source pack, retrieval route, task gate, input
+                cohesion, and model route stay aligned across a task family. V7 measures the
                 visible behavior layer: recall, correction retention, drift reduction,
                 source discipline, and cross-field synthesis. V8 is the internal-layer
                 bridge when that instrumentation is available. C5B / Golden Mark is
                 the current output-behavior support lane showing the architecture-on
                 delta before the internal probe is closed.
+            </p>
+            <p class="qwen-boundary">
+                The third comparison lane is the future checkpoint lane: Hugging Face /
+                transformer adapter work, LoRA or PEFT-style tuning, and late-layer
+                probes that test whether the SSP gain can be pushed further once real
+                adapter receipts are attached.
             </p>
             <p class="qwen-boundary">
                 Current receipt state: public repo, Qwen API proof code, hosted 500-turn
@@ -405,7 +454,7 @@
                 </article>
                 <article class="focus-card">
                     <h3>Video</h3>
-                    <p>Upload the final Qwen Tris demo to YouTube, Vimeo, or Facebook Video and link it from the Devpost submission.</p>
+                    <p>The public YouTube demo is live and embedded on this page for the Devpost submission. The separate Alibaba/Qwen proof clip remains attached as the backend/API evidence lane.</p>
                 </article>
                 <article class="focus-card">
                     <h3>Social</h3>
