@@ -175,6 +175,27 @@
             color: var(--text);
         }
 
+        .qwen-architecture-figure {
+            max-width: 920px;
+            margin: 28px auto 0;
+            border: 1px solid rgba(0, 216, 255, 0.28);
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.72);
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
+        }
+
+        .qwen-architecture-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .qwen-architecture-figure figcaption {
+            padding: 14px 16px;
+            color: var(--muted);
+        }
+
         .qwen-video {
             margin-top: 24px;
             border: 1px solid rgba(0, 216, 255, 0.3);
@@ -312,6 +333,10 @@
                     reduction against the baseline.
                 </p>
             </div>
+            <figure class="qwen-architecture-figure">
+                <img src="assets/qwen-tris-architecture-diagram-20260705.png" alt="Qwen Tris architecture diagram connecting the UI, Python backend, Mirror Architecture, memory store, source retrieval, receipts, local fallback, and Qwen Cloud" loading="lazy" />
+                <figcaption>Compact architecture diagram: Qwen Tris routes the user surface through the Python backend, Mirror Architecture SSP rails, memory and source retrieval, audit receipts, local fallback, and Qwen Cloud.</figcaption>
+            </figure>
             <div class="qwen-image-grid">
                 <figure class="qwen-shot">
                     <img src="assets/qwen-tris-ui-home-20260702.png" alt="Qwen Tris Recall home surface" loading="lazy" />
