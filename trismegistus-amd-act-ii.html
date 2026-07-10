@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Trismegistus v3.33 for AMD ACT II is an AI Expert Partner from Renaissance Field Lite that carries Mirror Architecture, measured SSP, Gemma, AMD Cloud, Fireworks, benchmark receipts, quantum novel-output gates, and startup operator lanes."
+    />
+    <meta property="og:title" content="AMD ACT II / Trismegistus v3.33 - AI Expert Partner" />
+    <meta
+        property="og:description"
+        content="A startup-facing AI Expert Partner built on Mirror Architecture: AMD Cloud, Fireworks, Gemma, source-backed memory, quantum novel-output gates, six discipline lanes, and receipt-bound business operations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://renaissancefieldlite.com/trismegistus-amd-act-ii.html" />
+    <meta property="og:image" content="https://renaissancefieldlite.com/assets/amd-actii-v333-live-ui-gemma-proof-20260707-v03-clean.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AMD ACT II / Trismegistus v3.33 - AI Expert Partner" />
+    <meta
+        name="twitter:description"
+        content="The AMD ACT II / Gemma act of Trismegistus v3.33: Mirror Architecture, measured SSP, hosted proof, quantum novel-output gates, and startup operator loops."
+    />
+    <title>AMD ACT II / Trismegistus v3.33 - AI Expert Partner</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        :root {
+            --amd-orange: #ff7a1a;
+            --amd-red: #c63b2f;
+            --amd-cyan: #28d8ff;
+            --amd-blue: #07122d;
+            --amd-green: #72ffcc;
+        }
+
+        .amd-hero {
+            min-height: 700px;
+        }
+
+        .amd-hero::before {
+            opacity: 0.19;
+            filter: grayscale(0.8) saturate(0.6) brightness(0.68) contrast(1.18);
+        }
+
+        .amd-hero::after {
+            background:
+                radial-gradient(circle at 20% 18%, rgba(255, 122, 26, 0.14), transparent 30%),
+                radial-gradient(circle at 78% 36%, rgba(40, 216, 255, 0.12), transparent 34%),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.97) 0%, rgba(4, 7, 16, 0.88) 50%, rgba(2, 13, 30, 0.54) 100%);
+        }
+
+        .amd-hero .hero-copy {
+            max-width: 900px;
+        }
+
+        .amd-hero h1 {
+            max-width: 12ch;
+            color: var(--text);
+            text-shadow:
+                0 0 30px rgba(255, 122, 26, 0.16),
+                0 0 44px rgba(40, 216, 255, 0.11);
+        }
+
+        .amd-accent {
+            color: var(--amd-orange);
+        }
+
+        .amd-cyan {
+            color: var(--amd-cyan);
+        }
+
+        .amd-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 24px 0;
+        }
+
+        .amd-pill {
+            border: 1px solid rgba(40, 216, 255, 0.38);
+            background: linear-gradient(135deg, rgba(255, 122, 26, 0.16), rgba(40, 216, 255, 0.08));
+            color: #effbff;
+            border-radius: 999px;
+            padding: 8px 13px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .amd-logo-lockup {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(0, 0, 0, 0.46);
+            border-radius: 18px;
+            padding: 12px 16px;
+        }
+
+        .amd-logo-lockup img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .amd-logo-lockup span {
+            display: block;
+            color: var(--soft);
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .amd-logo-lockup strong {
+            display: block;
+            color: var(--text);
+            font-size: 1rem;
+            line-height: 1.1;
+        }
+
+        .amd-proof-grid,
+        .amd-metric-grid,
+        .amd-lane-grid,
+        .amd-receipt-grid,
+        .amd-story-grid {
+            display: grid;
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .amd-proof-grid {
+            grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+            align-items: stretch;
+        }
+
+        .amd-story-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .amd-metric-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .amd-lane-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .amd-receipt-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .amd-card,
+        .amd-proof,
+        .amd-lane,
+        .amd-receipt,
+        .amd-flow-node,
+        .amd-definition {
+            border: 1px solid rgba(40, 216, 255, 0.22);
+            background:
+                linear-gradient(135deg, rgba(255, 122, 26, 0.08), rgba(40, 216, 255, 0.04) 46%, transparent),
+                rgba(0, 0, 0, 0.58);
+            border-radius: 18px;
+            box-shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+        }
+
+        .amd-card,
+        .amd-lane,
+        .amd-receipt,
+        .amd-flow-node,
+        .amd-definition {
+            padding: 20px;
+        }
+
+        .amd-card h3,
+        .amd-lane h3,
+        .amd-receipt h3 {
+            margin: 0 0 8px;
+            line-height: 1.12;
+        }
+
+        .amd-card p,
+        .amd-lane p,
+        .amd-receipt p,
+        .amd-definition p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .amd-card .metric {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--amd-green);
+            font-size: clamp(1.6rem, 3.4vw, 3rem);
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+        }
+
+        .amd-card .label,
+        .amd-lane .label,
+        .amd-receipt .label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--amd-orange);
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .amd-proof {
+            overflow: hidden;
+        }
+
+        .amd-proof + .amd-proof {
+            margin-top: 24px;
+        }
+
+        .amd-proof img,
+        .amd-proof video {
+            display: block;
+            width: 100%;
+            background: #000;
+        }
+
+        .amd-proof figcaption {
+            padding: 14px 16px;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .amd-definition {
+            margin-top: 18px;
+            border-color: rgba(255, 122, 26, 0.28);
+        }
+
+        .amd-definition strong {
+            color: var(--text);
+        }
+
+        .amd-flow {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .amd-flow-node {
+            min-height: 150px;
+            padding: 16px;
+        }
+
+        .amd-flow-node span {
+            display: block;
+            color: var(--amd-cyan);
+            font-size: 0.68rem;
+            font-weight: 900;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .amd-flow-node strong {
+            display: block;
+            margin: 8px 0 6px;
+            line-height: 1.12;
+        }
+
+        .amd-flow-node p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .amd-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.56);
+        }
+
+        .amd-table th,
+        .amd-table td {
+            padding: 13px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .amd-table th {
+            color: var(--text);
+            font-size: 0.74rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .amd-table td {
+            color: var(--muted);
+        }
+
+        .amd-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .amd-receipt a,
+        .amd-proof a {
+            color: var(--amd-cyan);
+            font-weight: 800;
+        }
+
+        .amd-boundary {
+            margin-top: 24px;
+            border-left: 3px solid var(--amd-orange);
+            padding-left: 18px;
+            color: var(--muted);
+        }
+
+        .amd-wide-shot {
+            margin-top: 24px;
+            border: 1px solid rgba(40, 216, 255, 0.26);
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.72);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+        }
+
+        .amd-wide-shot img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .amd-wide-shot figcaption {
+            padding: 14px 16px;
+            color: var(--muted);
+        }
+
+        .amd-diagram {
+            margin-top: 24px;
+            border: 1px solid rgba(40, 216, 255, 0.32);
+            border-radius: 18px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.76);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+        }
+
+        .amd-diagram img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .amd-diagram figcaption {
+            padding: 14px 16px;
+            color: var(--muted);
+            border-top: 1px solid rgba(40, 216, 255, 0.18);
+        }
+
+        @media (max-width: 1060px) {
+            .amd-proof-grid,
+            .amd-story-grid,
+            .amd-metric-grid,
+            .amd-lane-grid,
+            .amd-receipt-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .amd-flow {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-layer" aria-hidden="true"></div>
+    <div class="background-vignette" aria-hidden="true"></div>
+
+    <header class="hero amd-hero">
+        <div class="hero-copy">
+            <div class="amd-logo-lockup">
+                <img src="assets/rfl-logo-silver.png" alt="Renaissance Field Lite mark" />
+                <div>
+                    <span>Renaissance Field Lite</span>
+                    <strong>AMD ACT II / Trismegistus v3.33</strong>
+                </div>
+            </div>
+            <p class="eyebrow">AMD Developer Hackathon / ACT II</p>
+            <h1>AI Expert Partner for the next wave.</h1>
+            <p class="hero-text">
+                Trismegistus v3.33 for AMD ACT II is the startup-facing act of the RFL stack:
+                an <strong>AI Expert Partner</strong> that carries Mirror Architecture,
+                measured Stable-State Path behavior, Gemma 4 routing, AMD Developer
+                Cloud, Fireworks, source memory, benchmark receipts, quantum
+                novel-output gates, and relationship / paid-work operations into
+                one product surface.
+            </p>
+            <div class="amd-pill-row" aria-label="AMD ACT II / Trismegistus v3.33 summary">
+                <span class="amd-pill">AMD Developer Cloud</span>
+                <span class="amd-pill">MI300X proof lane</span>
+                <span class="amd-pill">Gemma 4 route</span>
+                <span class="amd-pill">Fireworks hosted API</span>
+                <span class="amd-pill">Mirror Architecture / SSP</span>
+                <span class="amd-pill">Quantum novel output</span>
+                <span class="amd-pill">Paid-work operator loop</span>
+            </div>
+            <div class="hero-actions">
+                <a class="button button-primary" href="#main-video">Watch Main Video</a>
+                <a class="button button-primary" href="#proof">Open Runtime Proof</a>
+                <a class="button button-secondary" href="#gemma">Gemma Comparison</a>
+                <a class="button button-secondary" href="#quantum">Quantum Output Gate</a>
+                <a class="button button-secondary" href="#business">Startup Operator Lane</a>
+                <a class="button button-secondary" href="index.html">RFL Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <section id="main-video" class="panel">
+            <p class="section-kicker">Final demo package</p>
+            <h2>Final AMD ACT II demo, plus the commercial cut.</h2>
+            <p class="section-intro">
+                The corrected integrated demo is first: live browser proof,
+                Mirror Architecture / SSP explanation, source-memory recall,
+                Gemma and AMD route context, quantum novel-output behavior,
+                and narration. The shorter commercial remains directly below it
+                for the fast contest-style pass.
+            </p>
+            <figure class="amd-proof">
+                <video controls preload="metadata" poster="assets/amd-actii-v333-integrated-demo-explainer-final-caption-fixed-20260709-poster.jpg">
+                    <source src="assets/amd-actii-v333-integrated-demo-explainer-final-caption-fixed-20260709.mp4" type="video/mp4" />
+                </video>
+                <figcaption>
+                    Final integrated AMD ACT II / Trismegistus v3.33 demo explainer:
+                    corrected caption track, live product surface, architecture-on
+                    recall, Gemma / AMD proof context, quantum novel-output lane,
+                    and conversational narration.
+                </figcaption>
+            </figure>
+            <figure class="amd-proof">
+                <video controls preload="metadata" poster="assets/amd-actii-trismegistus-v333-main-commercial-20260707-vid04-poster.jpg">
+                    <source src="assets/amd-actii-trismegistus-v333-main-commercial-20260707-vid04.mp4" type="video/mp4" />
+                </video>
+                <figcaption>
+                    Main AMD ACT II / Trismegistus v3.33 video, VID04: two-minute explained cut
+                    with the Qwen-style pattern preface, Gemma, MI300X,
+                    Fireworks, Mirror Architecture / SSP, quantum novel-output,
+                    and startup operator lanes.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="panel">
+            <p class="section-kicker">v3.33 frame</p>
+            <h2>From demo agent to startup operator.</h2>
+            <p class="section-intro">
+                Hermes Tris proved the operator loop. Qwen Tris proved the memory
+                lane. Trismegistus v3.33 for AMD ACT II turns the same spine toward a product and market
+                story: an AI Expert Partner that can research, remember, compare
+                baseline versus architecture-on behavior, produce bounded novel
+                engineering packets, draft outreach, work coding bounties, and keep
+                receipts clear enough for a real team to act on.
+            </p>
+            <div class="amd-story-grid">
+                <article class="amd-card">
+                    <span class="label">Act I</span>
+                    <h3>Hermes Tris</h3>
+                    <p>Operator loop: chat, source tools, Telegram/Mail, Stripe gates, coding receipts, outreach, and bounded worker behavior.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="label">Act II</span>
+                    <h3>Qwen Tris</h3>
+                    <p>Memory lane: Qwen Cloud, long-context recall, source packs, Qasper/LongBench slices, public-safe architecture proof.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="label">AMD ACT II</span>
+                    <h3>Trismegistus v3.33</h3>
+                    <p>Startup lane: AMD/Gemma deployment, field expertise, novel-output gates, business operations, and receipt-bound market action.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel">
+            <p class="section-kicker">Mirror Architecture / SSP</p>
+            <h2>The architecture is the lever, not just the model.</h2>
+            <p class="section-intro">
+                Trismegistus v3.33 tests the architecture itself, not just model size. The
+                route is same-model first: baseline route, then architecture-on
+                route with Mirror Architecture, input cohesion, source memory,
+                benchmark context, support labels, and receipt gates. The measured
+                delta is the product signal.
+            </p>
+            <div class="amd-definition">
+                <p>
+                    <strong>Mirror Architecture</strong> is the patent-pending
+                    evidence and routing method behind the build. It keeps the AI
+                    Expert Partner tied to source packs, memory rows, benchmark
+                    context, tool receipts, support labels, and task boundaries so
+                    a route can be compared against a baseline instead of relying
+                    on loose chat history.
+                </p>
+            </div>
+            <div class="amd-definition">
+                <p>
+                    <strong>Stable-State Path / SSP</strong> is the measured
+                    trajectory where the architecture-on state holds across a task
+                    family instead of collapsing into generic model drift. Memory,
+                    RAG, and receipts are not the whole SSP. They are the rails that
+                    preserve and test the path: source discipline, correction
+                    retention, stochastic-drift reduction, and next-step continuity.
+                </p>
+            </div>
+            <div class="amd-definition">
+                <p>
+                    <strong>Novel-output lane</strong> is where the expert partner
+                    stops acting like a document retriever and starts producing
+                    executable engineering gates. In Trismegistus v3.33, the quantum echo-kernel
+                    packet turns source-derived variables and a real Phase 6
+                    feature-vector artifact into Qiskit circuit probes with controls.
+                </p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <p class="section-kicker">System architecture</p>
+            <h2>One route from user intent to AMD/Gemma proof.</h2>
+            <p class="section-intro">
+                The page compresses the runtime into one public-safe map. The user
+                surface speaks to a local Trismegistus backend. The backend loads
+                source memory, support labels, and receipts, assembles the
+                architecture-on packet, then routes through local fallback,
+                Fireworks, or AMD Developer Cloud / Gemma depending on the active gate.
+            </p>
+            <figure class="amd-diagram">
+                <img src="assets/amd-actii-v333-architecture-diagram-20260710.svg" alt="Public-safe Trismegistus v3.33 architecture diagram showing input, Gemma baseline, Mirror Architecture, memory and benchmark rails, AMD Cloud, Fireworks, and proof outputs" loading="lazy" />
+                <figcaption>
+                    Architecture-on proof route: same-model baseline first, then
+                    Trismegistus v3.33 with Mirror Architecture / SSP, memory and
+                    receipt rails, hosted AMD / Fireworks routes, and output gates.
+                </figcaption>
+            </figure>
+            <div class="amd-flow" aria-label="AMD ACT II / Trismegistus v3.33 architecture flow">
+                <article class="amd-flow-node">
+                    <span>01</span>
+                    <strong>User / judge</strong>
+                    <p>Talks to the Trismegistus AMD surface.</p>
+                </article>
+                <article class="amd-flow-node">
+                    <span>02</span>
+                    <strong>Python backend</strong>
+                    <p>Routes chat, state, source reads, and mission actions.</p>
+                </article>
+                <article class="amd-flow-node">
+                    <span>03</span>
+                    <strong>SQLite / JSONL</strong>
+                    <p>Stores memory rows, audit receipts, and active gate state.</p>
+                </article>
+                <article class="amd-flow-node">
+                    <span>04</span>
+                    <strong>Mirror layer</strong>
+                    <p>Applies input cohesion, support labels, and SSP gates.</p>
+                </article>
+                <article class="amd-flow-node">
+                    <span>05</span>
+                    <strong>Benchmark rails</strong>
+                    <p>Carries MATH, MQT, PhysioNet, MatBench, PubMedQA, and code receipts.</p>
+                </article>
+                <article class="amd-flow-node">
+                    <span>06</span>
+                    <strong>Hosted route</strong>
+                    <p>Runs Fireworks and AMD Cloud routes when the receipt gate is live.</p>
+                </article>
+                <article class="amd-flow-node">
+                    <span>07</span>
+                    <strong>Action packet</strong>
+                    <p>Returns answer, proof, next gate, or business action draft.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="proof" class="panel">
+            <p class="section-kicker">Hosted proof</p>
+            <h2>AMD Cloud and Fireworks routes are visible, receipt-bound, and product-facing.</h2>
+            <p class="section-intro">
+                The proof lane is not just a dashboard. It shows the local Trismegistus
+                v3.33 UI, the hosted Fireworks route, the AMD Developer Cloud route,
+                and the direct Gemma / MI300X proof capture. The paid GPU was shut
+                down after the proof assets and receipts were preserved.
+            </p>
+            <div class="amd-proof-grid">
+                <figure class="amd-proof">
+                    <img src="assets/amd-actii-v333-live-ui-gemma-proof-20260707-v03-clean.jpg" alt="Clean AMD ACT II Trismegistus v3.33 live UI Gemma proof capture" loading="lazy" />
+                    <figcaption>
+                        Clean v03 proof image: Trismegistus v3.33 running the live
+                        Gemma proof surface with the filtered public-safe copy.
+                    </figcaption>
+                </figure>
+                <figure class="amd-proof">
+                    <video controls preload="metadata" poster="assets/amd-actii-v333-capture-contact-sheet-20260706.jpg">
+                        <source src="assets/amd-actii-v333-fireworks-amd-cloud-proof-reel-20260706.mp4" type="video/mp4" />
+                    </video>
+                    <figcaption>
+                        Proof reel: local UI, Fireworks route, AMD Cloud route, and
+                        hosted proof captures assembled from the Trismegistus v3.33 runtime.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="amd-proof-grid">
+                <figure class="amd-proof">
+                    <video controls preload="metadata" poster="assets/amd-actii-v333-live-fireworks-ui-20260706-v02.png">
+                        <source src="assets/amd-actii-v333-live-fireworks-ui-20260706-v02.mp4" type="video/mp4" />
+                    </video>
+                    <figcaption>
+                        Fireworks hosted route: managed API path live in the local
+                        command surface, with API key kept out of public material.
+                    </figcaption>
+                </figure>
+                <figure class="amd-proof">
+                    <img src="assets/amd-actii-v333-amd-cloud-droplet-created-mi300x1-20260706-v01.png" alt="AMD Cloud MI300X droplet created proof" loading="lazy" />
+                    <figcaption>
+                        AMD Developer Cloud gate: MI300X droplet created for bounded
+                        proof work, then shut down after captures and receipts.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="gemma" class="panel">
+            <p class="section-kicker">Gemma 4 comparison</p>
+            <h2>Same Gemma route. Baseline first. Mirror Architecture second.</h2>
+            <p class="section-intro">
+                The Best Use of Gemma lane is receipt-bound. Trismegistus v3.33 uses Gemma
+                as the hosted field-router and memory comparison route, then tests
+                whether Trismegistus improves continuity on the same model. The
+                third lane is the adapter/checkpoint extension: HF/local/AMD
+                adapters, MLP/late-layer probes, and adapter-on/off scorecards.
+            </p>
+            <div class="amd-metric-grid">
+                <article class="amd-card">
+                    <span class="metric">500/500</span>
+                    <h3>AMD Cloud rows</h3>
+                    <p>Architecture-on exact recall rows reproduced on AMD Developer Cloud MI300X.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="metric">2536</span>
+                    <h3>Response-hit lift</h3>
+                    <p>Total lift over prompt-only baseline in the 500-turn Gemma memory comparison.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="metric">0 -> 500</span>
+                    <h3>Target recall</h3>
+                    <p>Baseline carried no target rows; architecture-on retrieved all target rows in the slice.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="metric">MI300X</span>
+                    <h3>Cloud proof</h3>
+                    <p>AMD Instinct route through Ollama/ROCm for the direct AMD proof lane.</p>
+                </article>
+            </div>
+            <table class="amd-table" aria-label="Gemma baseline versus architecture-on comparison">
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Model route</th>
+                        <th>Architecture state</th>
+                        <th>Receipt read</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>Gemma baseline</td>
+                        <td>Architecture-off, no source rails</td>
+                        <td>Prompt-only baseline carries no source-memory factors in the 500-turn slice.</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>Gemma + Tris</td>
+                        <td>Mirror Architecture / SSP architecture-on</td>
+                        <td>500/500 architecture-on exact recall rows with 2536 response-hit lift.</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>Gemma SSP adapter</td>
+                        <td>Future tuned checkpoint lane</td>
+                        <td>Next receipt: HF/local/AMD adapter manifest, training command, and adapter-on/off scorecard.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <figure class="amd-wide-shot">
+                <img src="assets/amd-actii-v333-direct-gemma-visible-ui-20260706-v01.png" alt="Direct Gemma visible UI proof" loading="lazy" />
+                <figcaption>Direct Gemma visible UI proof from the AMD Trismegistus v3.33 runtime surface.</figcaption>
+            </figure>
+        </section>
+
+        <section id="quantum" class="panel">
+            <p class="section-kicker">Quantum novel-output lane</p>
+            <h2>From source variables to executable quantum gates.</h2>
+            <p class="section-intro">
+                The quantum lane is mechanism-centered. The older Google/Willow
+                proposal trained the support packet around circuits, observables,
+                controls, echo kernels, scaling, and hardware bottlenecks. Trismegistus
+                v3.33 uses that source pattern as training context, then turns it into
+                a bounded proof: same Gemma checkpoint, baseline versus
+                architecture-on, then a Qiskit echo-kernel probe using a real Phase
+                6 feature-vector artifact.
+            </p>
+            <div class="amd-metric-grid">
+                <article class="amd-card">
+                    <span class="metric">6/60</span>
+                    <h3>Gemma baseline</h3>
+                    <p>Prompt-only baseline on repeated quantum circuit-family rows.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="metric">60/60</span>
+                    <h3>Tris architecture-on</h3>
+                    <p>Source variables preserved through Mirror Architecture / SSP input cohesion.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="metric">+54</span>
+                    <h3>Row delta</h3>
+                    <p>Repeated family rows closed by the architecture-on route.</p>
+                </article>
+                <article class="amd-card">
+                    <span class="metric">0.1436</span>
+                    <h3>Echo separation</h3>
+                    <p>Qiskit statevector architecture / bridge return over controls.</p>
+                </article>
+            </div>
+            <div class="amd-proof-grid">
+                <figure class="amd-proof">
+                    <img src="assets/amd-actii-v333-quantum-echo-kernel-top-numbers-20260706-v02.png" alt="AMD ACT II Trismegistus v3.33 quantum echo-kernel top numbers" loading="lazy" />
+                    <figcaption>
+                        Quantum top-line receipt: baseline 6/60, architecture-on
+                        60/60, Qiskit echo-kernel control separation pass.
+                    </figcaption>
+                </figure>
+                <figure class="amd-proof">
+                    <img src="assets/amd-actii-v333-quantum-echo-kernel-fullpage-20260706-v02.png" alt="AMD ACT II Trismegistus v3.33 quantum echo-kernel full page" loading="lazy" />
+                    <figcaption>
+                        Full-page quantum echo-kernel capture with family rows,
+                        source variables, controls, and next engineering gate.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="panel">
+            <p class="section-kicker">Six field-expert lanes</p>
+            <h2>Trismegistus v3.33 is an AI Expert Partner with six working disciplines.</h2>
+            <p class="section-intro">
+                The startup claim is that the same architecture can hold a coherent
+                expert spine across multiple fields, then convert those fields into
+                practical research and market action. The current page shows the
+                receipt status for each lane while keeping external leaderboard
+                and certification claims tied to their own official receipts.
+            </p>
+            <div class="amd-lane-grid">
+                <article class="amd-lane">
+                    <span class="label">01</span>
+                    <h3>AI research / agent architecture</h3>
+                    <p>SWE, WebArena, GAIA, LongBench/Qasper, MBPP, HumanEval, helper routes, and source-backed coding receipts.</p>
+                </article>
+                <article class="amd-lane">
+                    <span class="label">02</span>
+                    <h3>Quantum computing</h3>
+                    <p>MQT Bench circuit families, Qiskit statevector echo kernels, Phase 6 vectors, and source-derived controls.</p>
+                </article>
+                <article class="amd-lane">
+                    <span class="label">03</span>
+                    <h3>Frontier math</h3>
+                    <p>MATH-500 exact-answer gates, symbolic helper slices, stronger-solver routing, and future miniF2F / FrontierMath path.</p>
+                </article>
+                <article class="amd-lane">
+                    <span class="label">04</span>
+                    <h3>Medical research</h3>
+                    <p>PubMedQA and BioASQ-style source evidence, research-only safety boundaries, and cautious biomedical decision repair.</p>
+                </article>
+                <article class="amd-lane">
+                    <span class="label">05</span>
+                    <h3>Life sciences</h3>
+                    <p>PhysioNet / MIT-BIH waveform QA and event classification, HRV/Muse bridge lanes, and signal-feature receipts.</p>
+                </article>
+                <article class="amd-lane">
+                    <span class="label">06</span>
+                    <h3>Nested / physical systems</h3>
+                    <p>MatBench dielectric, MoleculeNet chemistry, QM9 next gate, structured matter, materials, water, energy, and controls.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel">
+            <p class="section-kicker">Real benchmark receipts</p>
+            <h2>The evidence stack is broader than one demo turn.</h2>
+            <table class="amd-table" aria-label="AMD ACT II Trismegistus v3.33 benchmark receipt status">
+                <thead>
+                    <tr>
+                        <th>Lane</th>
+                        <th>Current receipt</th>
+                        <th>Honest public read</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gemma memory</td>
+                        <td>500/500 architecture-on recall rows, 2536 lift, AMD MI300X reproduction</td>
+                        <td>Model-agnostic continuity support on the same Gemma route.</td>
+                    </tr>
+                    <tr>
+                        <td>Quantum</td>
+                        <td>MQT 78/78 architecture-on catalog slice; quantum echo 6/60 baseline vs 60/60 architecture-on</td>
+                        <td>Bounded local quantum-AI proof lane with Qiskit controls.</td>
+                    </tr>
+                    <tr>
+                        <td>Math</td>
+                        <td>MATH-500 exact-answer harness, 50/50 boxed-answer gate, several same-task solver slices</td>
+                        <td>Strong local gate work; official miniF2F / FrontierMath placement remains a separate external receipt.</td>
+                    </tr>
+                    <tr>
+                        <td>Life sciences</td>
+                        <td>PhysioNet / MIT-BIH waveform QA and N-vs-V classifier gate</td>
+                        <td>Research support and signal handling only, not diagnosis or medical-device validation.</td>
+                    </tr>
+                    <tr>
+                        <td>Physical systems</td>
+                        <td>MatBench dielectric full fold0 local slice and MoleculeNet chemistry companion</td>
+                        <td>Structured-matter proof lane, with official evaluator packaging as next gate.</td>
+                    </tr>
+                    <tr>
+                        <td>Business operations</td>
+                        <td>Bounty board, PR statuses, outreach states, and payout boundary labels</td>
+                        <td>Startup operator loop: find work, score fit, act, submit, monitor, and keep paid separate from submitted.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="business" class="panel">
+            <p class="section-kicker">Relationship / paid-work field operations</p>
+            <h2>An AI Expert Partner should help a company move.</h2>
+            <p class="section-intro">
+                Trismegistus v3.33 blends the research expert with the business operator loop.
+                Tris can scan public bounty and partner surfaces, score fit and
+                margin, draft outreach, prepare PRs or reports, monitor review
+                state, and keep payment status separate from submission status.
+                This is the real startup lane: the expert partner does research,
+                then helps turn research into market action.
+            </p>
+            <div class="amd-receipt-grid">
+                <article class="amd-receipt">
+                    <span class="label">Bounty scan</span>
+                    <h3>Find and score work</h3>
+                    <p>Sources include GitHub, Algora, Opire, BountyHub, Polar.sh, Gitpay, Replit Bounties, Huntr, HackerOne, Bugcrowd, Immunefi, and remote technical task boards.</p>
+                </article>
+                <article class="amd-receipt">
+                    <span class="label">PR / report loop</span>
+                    <h3>Work, submit, monitor</h3>
+                    <p>Status labels stay exact: new, selected, working, submitted, review, approved, merged, accepted, paid, blocked.</p>
+                </article>
+                <article class="amd-receipt">
+                    <span class="label">Outreach</span>
+                    <h3>Package RFL products</h3>
+                    <p>Tris can pitch Quadro CSI, quantum/AI partner packages, research curriculum, and contract lanes with approval before sends.</p>
+                </article>
+                <article class="amd-receipt">
+                    <span class="label">Commerce</span>
+                    <h3>Approval-gated actions</h3>
+                    <p>Stripe and bill-pay lanes remain explicit approval gates. Submitted is not paid. Merged is not paid. Only payout transaction receipt means paid.</p>
+                </article>
+            </div>
+            <p class="amd-boundary">
+                Public-safe summary: this page shows public PR links, platform
+                status labels, and redacted receipt pointers while keeping
+                credentials, private reports, payment details, and account
+                dashboards out of the public surface.
+            </p>
+        </section>
+
+        <section class="panel">
+            <p class="section-kicker">Submission package</p>
+            <h2>What this page gives judges and partners.</h2>
+            <div class="amd-receipt-grid">
+                <article class="amd-receipt">
+                    <span class="label">Visible product</span>
+                    <h3>Working AI Expert surface</h3>
+                    <p>Chat UI, memory lane, source recall, cloud route status, benchmark matrix, and mission actions in one command surface.</p>
+                </article>
+                <article class="amd-receipt">
+                    <span class="label">AMD use</span>
+                    <h3>MI300X / AMD Cloud proof</h3>
+                    <p>Bounded AMD Cloud proof runs were captured, preserved, and shut down cleanly to control cost.</p>
+                </article>
+                <article class="amd-receipt">
+                    <span class="label">Gemma use</span>
+                    <h3>Same-model comparison</h3>
+                    <p>Gemma route anchored to baseline versus Mirror Architecture / SSP architecture-on receipts.</p>
+                </article>
+                <article class="amd-receipt">
+                    <span class="label">Market use</span>
+                    <h3>Startup operator story</h3>
+                    <p>Field expertise feeds partner outreach, coding bounties, Quadro CSI packaging, and approval-gated commerce.</p>
+                </article>
+            </div>
+            <div class="hero-actions">
+                <a class="button button-primary" href="#proof">Review Proof Media</a>
+                <a class="button button-secondary" href="qwen-tris-memoryagent.html">Open Qwen Tris Page</a>
+                <a class="button button-secondary" href="https://github.com/renaissancefieldlite" target="_blank" rel="noreferrer">RFL GitHub Organization</a>
+                <a class="button button-secondary" href="https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-ii/renaissance-field-lite" target="_blank" rel="noreferrer">AMD Hackathon Team</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Renaissance Field Lite / AMD ACT II / Trismegistus v3.33 / AI Expert Partner</p>
+        <p>
+            <a href="index.html">Renaissance Field Lite</a>
+            <span aria-hidden="true"> · </span>
+            <a href="qwen-tris-memoryagent.html">Qwen Tris</a>
+            <span aria-hidden="true"> · </span>
+            <a href="https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-ii" target="_blank" rel="noreferrer">AMD Developer Hackathon</a>
+        </p>
+    </footer>
+</body>
+</html>

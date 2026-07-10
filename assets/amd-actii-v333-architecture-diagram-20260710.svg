@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AMD ACT II Trismegistus v3.33 architecture diagram</title>
+  <desc id="desc">Public-safe diagram showing user intent routed through Trismegistus, Mirror Architecture, memory and receipt rails, Gemma baseline comparison, AMD Cloud, Fireworks, and final proof outputs.</desc>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="68%">
+      <stop offset="0%" stop-color="#163a4a"/>
+      <stop offset="44%" stop-color="#071421"/>
+      <stop offset="100%" stop-color="#02050a"/>
+    </radialGradient>
+    <linearGradient id="orangeCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8a22"/>
+      <stop offset="48%" stop-color="#29e4ff"/>
+      <stop offset="100%" stop-color="#76ffca"/>
+    </linearGradient>
+    <linearGradient id="nodeFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101928"/>
+      <stop offset="100%" stop-color="#040912"/>
+    </linearGradient>
+    <linearGradient id="proofFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#231109"/>
+      <stop offset="44%" stop-color="#071725"/>
+      <stop offset="100%" stop-color="#06140d"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.16 0 0 0 0 0.92 0 0 0 0 1 0 0 0 0.72 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="orangeGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1 0 0 0 0 0.42 0 0 0 0 0.08 0 0 0 0.72 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#29e4ff"/>
+    </marker>
+    <style>
+      .label { font: 800 26px Inter, Arial, sans-serif; fill: #f7fbff; letter-spacing: 0.01em; }
+      .small { font: 600 18px Inter, Arial, sans-serif; fill: #b9c7d6; }
+      .tiny { font: 700 15px Inter, Arial, sans-serif; fill: #87eaff; letter-spacing: 0.08em; text-transform: uppercase; }
+      .metric { font: 900 38px Inter, Arial, sans-serif; fill: #76ffca; }
+      .orange { fill: #ff8a22; }
+      .cyan { fill: #29e4ff; }
+      .muted { fill: #a9b8c6; }
+      .node { fill: url(#nodeFill); stroke: rgba(41,228,255,0.56); stroke-width: 2.4; }
+      .proof { fill: url(#proofFill); stroke: rgba(255,138,34,0.72); stroke-width: 2.5; }
+      .line { fill: none; stroke: #29e4ff; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: 0.72; marker-end: url(#arrow); }
+      .rail { fill: none; stroke: #ff8a22; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 10 12; opacity: 0.72; marker-end: url(#arrow); }
+      .halo { fill: none; stroke: url(#orangeCyan); stroke-width: 5; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgGlow)"/>
+  <path d="M142 730 C320 565 438 390 616 446 C754 490 782 668 938 610 C1120 542 1132 284 1478 204" fill="none" stroke="#0e6578" stroke-width="2" opacity="0.44"/>
+  <path d="M94 194 C340 248 412 88 620 212 C806 324 758 498 948 510 C1152 524 1258 380 1512 444" fill="none" stroke="#693419" stroke-width="2" opacity="0.5"/>
+
+  <text x="88" y="82" class="tiny">Renaissance Field Lite / AMD Developer Hackathon ACT II</text>
+  <text x="88" y="122" class="label">Trismegistus v3.33 Architecture-On Proof Route</text>
+  <text x="88" y="154" class="small">Same-model Gemma baseline first, then Mirror Architecture / SSP with source memory, support labels, receipt gates, and AMD Cloud proof.</text>
+
+  <g filter="url(#orangeGlow)">
+    <rect x="604" y="302" width="392" height="250" rx="28" class="proof"/>
+    <path d="M800 220 L920 340 L800 460 L680 340 Z" fill="none" stroke="#ffffff" stroke-width="7" opacity="0.86"/>
+    <path d="M735 348 H865" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+    <path d="M750 390 H850" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.88"/>
+    <text x="800" y="505" text-anchor="middle" class="tiny orange">Mirror Architecture / SSP Core</text>
+    <text x="800" y="535" text-anchor="middle" class="small">source pack + memory + proof gate</text>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <rect x="92" y="274" width="316" height="140" rx="22" class="node"/>
+    <text x="122" y="316" class="tiny">01 Input</text>
+    <text x="122" y="354" class="label">Judge / Operator</text>
+    <text x="122" y="386" class="small">prompt, source task, demo turn</text>
+
+    <rect x="92" y="514" width="316" height="140" rx="22" class="node"/>
+    <text x="122" y="556" class="tiny">Control Lane</text>
+    <text x="122" y="594" class="label">Gemma Baseline</text>
+    <text x="122" y="626" class="small">same model, architecture off</text>
+
+    <rect x="462" y="646" width="300" height="126" rx="22" class="node"/>
+    <text x="492" y="688" class="tiny">Receipt Rails</text>
+    <text x="492" y="724" class="label">Memory / RAG</text>
+    <text x="492" y="754" class="small">500-turn rows, evidence labels</text>
+
+    <rect x="840" y="646" width="300" height="126" rx="22" class="node"/>
+    <text x="870" y="688" class="tiny">Benchmark Rails</text>
+    <text x="870" y="724" class="label">Quantum Gate</text>
+    <text x="870" y="754" class="small">baseline 6/60 to Tris 60/60</text>
+
+    <rect x="1192" y="214" width="316" height="142" rx="22" class="node"/>
+    <text x="1222" y="256" class="tiny">Hosted Route</text>
+    <text x="1222" y="294" class="label">AMD Cloud / MI300X</text>
+    <text x="1222" y="326" class="small">bounded live proof capture</text>
+
+    <rect x="1192" y="406" width="316" height="142" rx="22" class="node"/>
+    <text x="1222" y="448" class="tiny">Hosted API</text>
+    <text x="1222" y="486" class="label">Fireworks + Gemma</text>
+    <text x="1222" y="518" class="small">managed route, key redacted</text>
+
+    <rect x="1192" y="606" width="316" height="142" rx="22" class="node"/>
+    <text x="1222" y="648" class="tiny">Output Gate</text>
+    <text x="1222" y="686" class="label">Proof Packet</text>
+    <text x="1222" y="718" class="small">answer, receipt, next action</text>
+  </g>
+
+  <path d="M408 344 C478 344 516 360 604 386" class="line"/>
+  <path d="M408 584 C508 584 538 516 604 484" class="rail"/>
+  <path d="M762 708 C774 628 778 584 800 552" class="rail"/>
+  <path d="M932 646 C918 608 894 578 870 552" class="rail"/>
+  <path d="M996 370 C1070 320 1112 292 1192 286" class="line"/>
+  <path d="M996 436 C1086 442 1112 466 1192 478" class="line"/>
+  <path d="M996 512 C1074 588 1114 652 1192 678" class="line"/>
+
+  <g>
+    <rect x="642" y="162" width="316" height="76" rx="20" fill="rgba(0,0,0,0.54)" stroke="rgba(255,255,255,0.16)"/>
+    <text x="800" y="195" text-anchor="middle" class="tiny">Measured Delta</text>
+    <text x="800" y="225" text-anchor="middle" class="metric">500 / 500 recall</text>
+  </g>
+
+  <g>
+    <rect x="434" y="248" width="248" height="66" rx="18" fill="rgba(255,138,34,0.12)" stroke="rgba(255,138,34,0.46)"/>
+    <text x="558" y="276" text-anchor="middle" class="tiny orange">Baseline comparison</text>
+    <text x="558" y="303" text-anchor="middle" class="small">not just memory replay</text>
+  </g>
+
+  <g>
+    <rect x="910" y="248" width="248" height="66" rx="18" fill="rgba(41,228,255,0.12)" stroke="rgba(41,228,255,0.46)"/>
+    <text x="1034" y="276" text-anchor="middle" class="tiny cyan">Architecture-On</text>
+    <text x="1034" y="303" text-anchor="middle" class="small">same task, stronger path</text>
+  </g>
+
+  <path d="M92 828 H1508" stroke="url(#orangeCyan)" stroke-width="3" opacity="0.72"/>
+  <text x="92" y="862" class="small muted">Public-safe read: private keys, raw account state, and operator-only mechanics stay out of the page; proof media and source-backed receipts are shown.</text>
+</svg>
