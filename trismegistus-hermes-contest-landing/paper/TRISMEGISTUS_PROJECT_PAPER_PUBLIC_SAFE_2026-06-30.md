@@ -169,9 +169,9 @@ Current public-safe receipts:
 
 - C5B / Golden Mark: 13/13 matched metric means won by
   Mirror Architecture-on on the local scorecard.
-- SWE-bench: strong local official-harness selected-test receipt around
-  495/500; hosted adjudication package submitted; no public leaderboard claim
-  until accepted.
+- SWE-bench: local official-harness selected-test receipt packaged as a
+  receipt-bound coding lane; hosted adjudication package submitted; no public
+  leaderboard claim until accepted.
 - WebArena: hard receipt around 255/258; final rows parked for upstream or
   contest interpretation; no clean 258/258 claim.
 - GAIA: staged/gated; no official public score claim yet.
