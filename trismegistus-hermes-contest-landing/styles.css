@@ -189,6 +189,10 @@ h3 {
   color: #080806;
 }
 
+.live-launch {
+  box-shadow: 0 0 0 3px rgba(244, 216, 107, 0.18);
+}
+
 .band {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
@@ -242,6 +246,28 @@ h3 {
   color: var(--muted);
   font-size: 18px;
   line-height: 1.5;
+}
+
+.live-app-callout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(244, 216, 107, 0.52);
+  border-radius: 8px;
+  background: rgba(244, 216, 107, 0.12);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 820;
+}
+
+.live-app-callout a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
 }
 
 .hermes-demo {
