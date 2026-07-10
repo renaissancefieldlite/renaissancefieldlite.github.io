@@ -58,8 +58,8 @@
           <p class="section-intro">
             This is the Hermes contest build surface: AI Expert Partner, AI Field Expert, Mirror
             Architecture / SSP, receipt discipline, SWE/WebArena proof lanes, and review-gated
-            real-world operations. The hosted Render app is a key-gated prototype, not the primary
-            proof path until Hermes/Nous inference is connected.
+            real-world operations. The hosted Render app is now connected to the Hermes/Nous route
+            for live conversational checks, while benchmark and source claims stay receipt-bound.
           </p>
         </div>
         <div class="hermes-demo-grid">
@@ -82,11 +82,14 @@
               <li>Review stops before live sends, spends, or public claims</li>
             </ul>
             <p class="live-demo-note">
-              Hosted Render currently proves the UI, health endpoint, and bounded proof surface.
-              It is not presented here as arbitrary live AI chat until <code>HERMES_API_KEY</code> or
-              <code>NOUS_API_KEY</code> is connected in Render.
+              Hosted Render now proves the UI, health endpoint, runtime key route, and live
+              Trismegistus chat path. Source, benchmark, and leaderboard claims remain receipt-gated
+              instead of promoted from a single chat turn.
             </p>
             <div class="demo-actions">
+              <a class="button primary" href="https://trismegistus-hermes-live.onrender.com" target="_blank" rel="noopener">
+                Try live Hermes app
+              </a>
               <a class="button primary" href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_TRANSCRIPT.md">
                 Open transcript
               </a>
@@ -296,12 +299,18 @@
           <p class="eyebrow">Operator surface</p>
           <h2>Live Tris command page</h2>
           <p>
-            The local Trismegistus surface is the working command page for chat, source tools, memory receipts,
-            browser missions, and benchmark gates. It runs on the operator machine during development, so a
-            public website cannot open it directly until the backend is hosted or tunneled.
+            The hosted Trismegistus surface is live on Render for public conversational checks and
+            runtime health verification. Local source tools, browser missions, and benchmark lanes remain
+            receipt-gated so a judge can separate live chat behavior from deeper private operator runs.
           </p>
         </div>
         <div class="link-stack">
+          <a href="https://trismegistus-hermes-live.onrender.com">
+            Open live Render app
+          </a>
+          <a href="https://trismegistus-hermes-live.onrender.com/api/runtime">
+            Open runtime receipt endpoint
+          </a>
           <a href="./receipts/2026-07-02_TRIS_LOCAL_SURFACE_HOSTING_NOTE.md">
             Read local surface runbook and hosting gate
           </a>
