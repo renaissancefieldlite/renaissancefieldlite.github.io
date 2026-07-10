@@ -33,9 +33,9 @@
         <h1>Trismegistus</h1>
         <p class="hero-line">Live Hermes demo entry for judges and reviewers.</p>
         <p class="hero-copy">
-          This fresh page points directly at the hosted Render surface. It separates live chat behavior
-          from receipt-bound benchmark and source claims, so the demo can be tested without overstating
-          what one hosted turn proves.
+          This fresh page points directly at the hosted Render surface. It separates hosted UI behavior
+          and provider-gate status from receipt-bound benchmark and source claims, so the demo can be
+          tested without overstating what one hosted turn proves.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="https://trismegistus-hermes-live.onrender.com" target="_blank" rel="noopener">
@@ -53,12 +53,12 @@
       <section id="live-demo" class="band hermes-demo">
         <div class="section-head">
           <p class="eyebrow">Public test path</p>
-          <h2>Hosted Hermes chat is the live app gate.</h2>
+          <h2>Hosted Render is live; Hermes generation is provider-gated.</h2>
           <p class="section-intro">
             The Render app currently exposes the UI, health endpoint, runtime route, and Trismegistus
-            chat path. Use the runtime endpoint to verify the active model route, then open the app and
-            ask conversational Tris questions. Deeper benchmark, source, and leaderboard claims remain
-            tied to their receipts.
+            proof/status surface. Use the runtime endpoint to verify whether the Hermes/Nous completion
+            endpoint is live or provider-gated, then open the app and test the visible behavior. Deeper
+            benchmark, source, and leaderboard claims remain tied to their receipts.
           </p>
         </div>
         <div class="hermes-demo-grid">
@@ -72,10 +72,10 @@
           </article>
           <aside class="hermes-demo-panel" aria-label="Live Hermes proof path">
             <p class="eyebrow">Use this order</p>
-            <h3>Open runtime, open app, ask Tris, then check receipts.</h3>
+            <h3>Open runtime, open app, check the provider gate, then check receipts.</h3>
             <ul class="demo-checklist">
-              <li>Runtime endpoint confirms the active hosted route.</li>
-              <li>Live app lets judges test conversational Trismegistus directly.</li>
+              <li>Runtime endpoint confirms whether Hermes/Nous completions are live or provider-gated.</li>
+              <li>Live app lets judges test the hosted Trismegistus surface directly.</li>
               <li>Health endpoint confirms the service is reachable before judging.</li>
               <li>Receipts keep benchmark and source claims separate from chat output.</li>
             </ul>
@@ -105,7 +105,7 @@
         <div class="metrics">
           <article>
             <strong>Live app</strong>
-            <span>Render-hosted Hermes/Nous route for public conversational checks</span>
+            <span>Render-hosted app with explicit Hermes/Nous provider-gate status</span>
           </article>
           <article>
             <strong>Local receipt</strong>
