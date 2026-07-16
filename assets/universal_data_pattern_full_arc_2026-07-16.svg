@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
   <title id="title">Universal Data Pattern Full Arc</title>
-  <desc id="desc">Public-safe visual map from Mirror Interface through Nests 0 to 5 and B.A.S.I.S. runtime routing.</desc>
+  <desc id="desc">Public-safe visual map from Mirror Interface through the measured Nest 1 to Nest 5 ladder and B.A.S.I.S. runtime routing.</desc>
   <defs>
     <radialGradient id="bg" cx="72%" cy="20%" r="90%">
       <stop offset="0%" stop-color="#102a3a"/>
@@ -51,33 +51,33 @@
 
   <path class="line" d="M1198 360 C1198 430,1198 450,1198 515"/>
   <rect class="box" x="120" y="520" width="250" height="132"/>
-  <text class="label" x="146" y="560">Nest 0</text>
-  <text class="text" x="146" y="594">pre-geometric access language</text>
-  <text class="text" x="146" y="624">target-selection foundation</text>
+  <text class="label" x="146" y="560">Nest 1</text>
+  <text class="text" x="146" y="594">formal systems, math, topology</text>
+  <text class="text" x="146" y="624">closed current level</text>
 
   <rect class="box" x="410" y="520" width="250" height="132"/>
-  <text class="label" x="436" y="560">Nest 1</text>
-  <text class="text" x="436" y="594">formal systems, math, topology</text>
-  <text class="text" x="436" y="624">closed current level</text>
+  <text class="label" x="436" y="560">Nest 2</text>
+  <text class="text" x="436" y="594">matter, electrochemistry, environment</text>
+  <text class="text" x="436" y="624">support-bearing to closed</text>
 
   <rect class="box" x="700" y="520" width="250" height="132"/>
-  <text class="label" x="726" y="560">Nest 2</text>
-  <text class="text" x="726" y="594">matter, electrochemistry, environment</text>
-  <text class="text" x="726" y="624">support-bearing to closed</text>
+  <text class="label" x="726" y="560">Nest 3</text>
+  <text class="text" x="726" y="594">spectra, plasma, solar, phases</text>
+  <text class="text" x="726" y="624">mostly closed; THz/EMF open</text>
 
   <rect class="box" x="990" y="520" width="250" height="132"/>
-  <text class="label" x="1016" y="560">Nest 3</text>
-  <text class="text" x="1016" y="594">spectra, plasma, solar, phases</text>
-  <text class="text" x="1016" y="624">mostly closed; THz/EMF open</text>
+  <text class="label" x="1016" y="560">Nest 4</text>
+  <text class="text" x="1016" y="594">biology, HRV, Muse, metabolism</text>
+  <text class="text" x="1016" y="624">support-bearing with private boundary</text>
 
   <rect class="box" x="1280" y="520" width="250" height="132"/>
-  <text class="label" x="1306" y="560">Nest 4</text>
-  <text class="text" x="1306" y="594">biology, HRV, Muse, metabolism</text>
-  <text class="text" x="1306" y="624">support-bearing with private boundary</text>
+  <text class="label" x="1306" y="560">Nest 5</text>
+  <text class="text" x="1306" y="594">product routing, evidence memory</text>
+  <text class="text" x="1306" y="624">runtime and partner surfaces</text>
 
   <path class="line" d="M245 670 C460 765,1175 765,1405 670"/>
   <rect class="boxHot" x="560" y="760" width="300" height="135"/>
-  <text class="label" x="586" y="805">Nest 5 Product Routing</text>
+  <text class="label" x="586" y="805">Product Runtime Surfaces</text>
   <text class="text" x="586" y="839">Golden Field Lite, Mirror Index</text>
   <text class="text" x="586" y="870">licensing, partner systems</text>
 
