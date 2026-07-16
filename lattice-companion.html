@@ -378,9 +378,10 @@
         <p class="lane-note">Nest 4 is the living timing and physiology layer. It takes the same state / control / transform / drift / quality / support stack into real biological captures and biology-facing datasets.</p>
         <div class="lane-board">
           <div class="lane-row"><strong>Core rows</strong><span>HRV, EEG, optical / PPG candidate lanes, motion, reference quality, cells / genome, metabolism, microbiome, proteome, membranes, mitochondria, and physiology.</span></div>
-          <div class="lane-row"><strong>Current support rows</strong><span>Phase 12B HRV seats the first biological matrix; Phase 12C Muse S Athena seats EEG / optical / IMU / DRL capture; Phase 12C N2 seats 15 / 15 same-clock HRV + Muse rows; expanded states add 15 / 15 additional biology rows.</span></div>
+          <div class="lane-row"><strong>Current support rows</strong><span>Phase 12B HRV seats the first biological matrix; Phase 12C Muse S Athena seats EEG / optical / IMU / DRL capture; Phase 12C N2 seats 15 / 15 same-clock HRV + Muse rows; expanded states add 15 / 15 additional biology rows; July 2026 aggregate inventory seats 62 same-clock folders and 32 complete HRV + Muse artifact folders with raw captures held private.</span></div>
           <div class="lane-row"><strong>Formal return rows</strong><span>DE-1, SPEC-1, and TOPOG now have masked candidate passes from real Phase 12C outputs: dynamics, waveform spectra, and channel/topography surfaces with QA boundaries preserved.</span></div>
-          <div class="lane-row"><strong>Remaining rows</strong><span>Synchronized waveform QA, stronger channel masks, HRV + EEG state packs, metabolism / nutrition response rows, and cell / membrane datasets are the next biology hardening lanes. Li conductivity now gives the membrane / ion-transport precursor row from the materials side.</span></div>
+          <div class="lane-row"><strong>Runtime bridge</strong><span>Recorded B.A.S.I.S. state frames now route through a Holoscan-style source adapter, timing / quality guard, and lane sink path: 468 rows, 7 lane sinks, 0 drops, 0 sequence gaps, and 2 recorded windows with 0 global / segment gaps.</span></div>
+          <div class="lane-row"><strong>Remaining rows</strong><span>Synchronized waveform QA, stronger channel masks, HRV + EEG state packs, live-ingest Holoscan receipt, metabolism / nutrition response rows, cell / membrane datasets, and true HRV + Muse + temperature triple capture are the next biology hardening lanes. Li conductivity now gives the membrane / ion-transport precursor row from the materials side.</span></div>
         </div>
       </section>
       <section class="card">
@@ -388,7 +389,7 @@
         <p class="lane-note">Nest 5 is the convergence layer: it compares completed rows across formal systems, matter, field dynamics, biology, ecology, engineered systems, and public-safe evidence memory so the arc can be read in one place.</p>
         <div class="lane-board">
           <div class="lane-row"><strong>Core rows</strong><span>Ecosystem / planet, stars / planets, dark-matter observables, cosmic web / universe, engineered systems, prototype lanes, Mirror Index, Golden Mirror, and cross-nest evidence memory.</span></div>
-          <div class="lane-row"><strong>Current support rows</strong><span>Nest 5 now receives supported rows from Nest 1 formal closeout, Nest 2 matter / electrochemistry / spectra / conductivity / dissolved oxygen / ORP redox-potential / grid-flow / ozone / ozone precursor-meteorology / PM2.5 particle state / HMS smoke attribution, Nest 3 spectral / waveform / impedance / water-quality / redox-potential / water-transport / oxidant-state / weather-context / particle-state / smoke-attribution bridges, and Nest 4 HRV + Muse biology captures.</span></div>
+          <div class="lane-row"><strong>Current support rows</strong><span>Nest 5 now receives supported rows from Nest 1 formal closeout, Nest 2 matter / electrochemistry / spectra / conductivity / dissolved oxygen / ORP redox-potential / grid-flow / ozone / ozone precursor-meteorology / PM2.5 particle state / HMS smoke attribution, Nest 3 spectral / waveform / impedance / water-quality / redox-potential / water-transport / oxidant-state / weather-context / particle-state / smoke-attribution bridges, Nest 4 HRV + Muse biology captures, and the B.A.S.I.S. Holoscan runtime bridge.</span></div>
           <div class="lane-row"><strong>Convergence matrix</strong><span>The matrix separates each lane into supported, candidate, boundary, and continuation states so public claims preserve the actual evidence level without flattening the architecture.</span></div>
           <div class="lane-row"><strong>Execution loop</strong><span>Run the next real-data rows, seat each into the convergence matrix, update patent claim support, then route the public-safe summary into the evidence repository and website when cleared.</span></div>
         </div>
@@ -786,7 +787,7 @@
         type: "medical biosignal buildout",
         status: "buildout page live",
         href: "basis-biosignal-ai.html",
-        description: "Nest 5 medical buildout surface for the broader B.A.S.I.S. lane: Muse EEG, MoFit HRV, future device streams, FHIR/Holoscan-ready clinical routing, patient-specific AI support, and biosignal-to-state-vector tuning."
+        description: "Nest 5 medical buildout surface for the broader B.A.S.I.S. lane: Muse EEG, MoFit HRV, future device streams, FHIR/Holoscan-ready clinical routing, patient-specific AI support, biosignal-to-state-vector tuning, and recorded Holoscan source / guard / sink runtime receipt."
       },
       {
         id: "golden_field_lite_ai_buildout",
@@ -987,10 +988,10 @@
         showNode("prototype_lanes", false);
         return "Prototype lanes are crossover build paths: PFAS breakdown, terahertz cellular mapping, HRV tuning, Quantum Insider tracks, Sovereign Edge, B.A.S.I.S., Golden Field Lite AI, licensing, and later local engines.";
       }
-      if (q.includes("nest 5 build") || q.includes("buildout") || q.includes("sovereign edge") || q.includes("basis") || q.includes("biosignal") || q.includes("medical") || q.includes("golden field") || q.includes("licensing")) {
-        if (q.includes("basis") || q.includes("biosignal") || q.includes("medical")) {
+      if (q.includes("nest 5 build") || q.includes("buildout") || q.includes("sovereign edge") || q.includes("basis") || q.includes("biosignal") || q.includes("medical") || q.includes("holoscan") || q.includes("golden field") || q.includes("licensing")) {
+        if (q.includes("basis") || q.includes("biosignal") || q.includes("medical") || q.includes("holoscan")) {
           showNode("basis_biosignal_ai_buildout", false);
-          return "B.A.S.I.S. BioSignal AI is seated as a Nest 5 buildout: the medical biosignal layer that pulls Muse EEG, MoFit HRV, future device streams, FHIR/Holoscan-ready routing, and biosignal-to-state-vector tuning into one clinical AI surface.";
+          return "B.A.S.I.S. BioSignal AI is seated as a Nest 5 buildout: the medical biosignal layer that pulls Muse EEG, MoFit HRV, future device streams, FHIR/Holoscan-ready routing, and biosignal-to-state-vector tuning into one clinical AI surface. The July 2026 bridge adds recorded Holoscan source / guard / sink runtime receipt while keeping raw captures private.";
         }
         if (q.includes("golden field")) {
           showNode("golden_field_lite_ai_buildout", false);

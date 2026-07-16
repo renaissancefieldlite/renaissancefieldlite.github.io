@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Universal Data Pattern Full Arc</title>
+  <desc id="desc">Public-safe visual map from Mirror Interface through Nests 0 to 5 and B.A.S.I.S. runtime routing.</desc>
+  <defs>
+    <radialGradient id="bg" cx="72%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#102a3a"/>
+      <stop offset="45%" stop-color="#041018"/>
+      <stop offset="100%" stop-color="#000304"/>
+    </radialGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #29495a; stroke-width: 1; opacity: 0.2; }
+      .box { fill: rgba(4,18,27,0.84); stroke: #52798a; stroke-width: 1.5; }
+      .boxHot { fill: rgba(4,25,37,0.92); stroke: #8ee5ff; stroke-width: 2; }
+      .line { stroke: #88ddff; stroke-width: 3; opacity: 0.66; fill: none; }
+      .dash { stroke: #88ddff; stroke-width: 2; opacity: 0.35; fill: none; stroke-dasharray: 8 8; }
+      .title { font-family: Arial, Helvetica, sans-serif; fill: #e5f8ff; font-size: 48px; font-weight: 900; letter-spacing: 0; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #8fdcff; font-size: 22px; font-weight: 700; letter-spacing: 0; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #9ee6ff; font-size: 20px; font-weight: 900; letter-spacing: 0; }
+      .text { font-family: Arial, Helvetica, sans-serif; fill: #dceaf0; font-size: 17px; font-weight: 500; letter-spacing: 0; }
+      .small { font-family: Arial, Helvetica, sans-serif; fill: #87a8b8; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+      .footer { font-family: Arial, Helvetica, sans-serif; fill: #7198aa; font-size: 15px; font-weight: 800; letter-spacing: 0; }
+    </style>
+  </defs>
+  <rect class="bg" width="1800" height="1100"/>
+  <g>
+    <path class="grid" d="M100 0v1100M220 0v1100M340 0v1100M460 0v1100M580 0v1100M700 0v1100M820 0v1100M940 0v1100M1060 0v1100M1180 0v1100M1300 0v1100M1420 0v1100M1540 0v1100M1660 0v1100"/>
+    <path class="grid" d="M0 100h1800M0 200h1800M0 300h1800M0 400h1800M0 500h1800M0 600h1800M0 700h1800M0 800h1800M0 900h1800M0 1000h1800"/>
+  </g>
+
+  <text class="small" x="80" y="70">UNIVERSAL DATA PATTERN / FULL ARC / PUBLIC-SAFE WHITE PAPER MAP</text>
+  <text class="title" x="80" y="132">One Pattern, Many Substrates, Bounded By Controls</text>
+  <text class="subtitle" x="82" y="170">Mirror Interface -> measured state path -> real rows -> controls -> support reads -> product/runtime routing.</text>
+
+  <rect class="boxHot" x="80" y="235" width="260" height="120"/>
+  <text class="label" x="106" y="278">Mirror Interface / LSPS</text>
+  <text class="text" x="106" y="313">condition packet and continuity</text>
+  <text class="text" x="106" y="342">become the measurement entrance</text>
+
+  <path class="line" d="M340 295 C420 295,450 295,530 295"/>
+  <rect class="boxHot" x="540" y="235" width="300" height="120"/>
+  <text class="label" x="566" y="278">Mirror Architecture</text>
+  <text class="text" x="566" y="313">state/control separation</text>
+  <text class="text" x="566" y="342">tracked through behavior and internals</text>
+
+  <path class="line" d="M840 295 C920 295,950 295,1030 295"/>
+  <rect class="boxHot" x="1040" y="235" width="315" height="120"/>
+  <text class="label" x="1066" y="278">Universal Data Pattern</text>
+  <text class="text" x="1066" y="313">stable relation and transform behavior</text>
+  <text class="text" x="1066" y="342">recurring across real substrates</text>
+
+  <path class="line" d="M1198 360 C1198 430,1198 450,1198 515"/>
+  <rect class="box" x="120" y="520" width="250" height="132"/>
+  <text class="label" x="146" y="560">Nest 0</text>
+  <text class="text" x="146" y="594">pre-geometric access language</text>
+  <text class="text" x="146" y="624">target-selection foundation</text>
+
+  <rect class="box" x="410" y="520" width="250" height="132"/>
+  <text class="label" x="436" y="560">Nest 1</text>
+  <text class="text" x="436" y="594">formal systems, math, topology</text>
+  <text class="text" x="436" y="624">closed current level</text>
+
+  <rect class="box" x="700" y="520" width="250" height="132"/>
+  <text class="label" x="726" y="560">Nest 2</text>
+  <text class="text" x="726" y="594">matter, electrochemistry, environment</text>
+  <text class="text" x="726" y="624">support-bearing to closed</text>
+
+  <rect class="box" x="990" y="520" width="250" height="132"/>
+  <text class="label" x="1016" y="560">Nest 3</text>
+  <text class="text" x="1016" y="594">spectra, plasma, solar, phases</text>
+  <text class="text" x="1016" y="624">mostly closed; THz/EMF open</text>
+
+  <rect class="box" x="1280" y="520" width="250" height="132"/>
+  <text class="label" x="1306" y="560">Nest 4</text>
+  <text class="text" x="1306" y="594">biology, HRV, Muse, metabolism</text>
+  <text class="text" x="1306" y="624">support-bearing with private boundary</text>
+
+  <path class="line" d="M245 670 C460 765,1175 765,1405 670"/>
+  <rect class="boxHot" x="560" y="760" width="300" height="135"/>
+  <text class="label" x="586" y="805">Nest 5 Product Routing</text>
+  <text class="text" x="586" y="839">Golden Field Lite, Mirror Index</text>
+  <text class="text" x="586" y="870">licensing, partner systems</text>
+
+  <rect class="boxHot" x="930" y="760" width="335" height="135"/>
+  <text class="label" x="956" y="805">B.A.S.I.S. Runtime Bridge</text>
+  <text class="text" x="956" y="839">HRV + Muse state frames</text>
+  <text class="text" x="956" y="870">Holoscan source / guard / sink</text>
+
+  <path class="dash" d="M1098 900 C1098 945,1098 955,1098 995"/>
+  <rect class="box" x="805" y="998" width="585" height="56"/>
+  <text class="text" x="835" y="1033">Remaining hard controls: THz/EMF source-disabled biology packet, B.A.S.I.S. live-ingest manifest, true temperature triple.</text>
+
+  <line x1="80" y1="1068" x2="1720" y2="1068" stroke="#345d70" stroke-width="1"/>
+  <text class="footer" x="80" y="1088">RENAISSANCE FIELD LITE / MIRROR ARCHITECTURE / PUBLIC-SAFE EVIDENCE STACK / NO TOY DATA</text>
+</svg>

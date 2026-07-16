@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" role="img" aria-labelledby="title desc">
+  <title id="title">B.A.S.I.S. Holoscan Runtime Bridge</title>
+  <desc id="desc">Public-safe visual showing recorded B.A.S.I.S. state frames routed through a Holoscan source, timing guard, and lane sinks.</desc>
+  <defs>
+    <radialGradient id="bg" cx="68%" cy="24%" r="82%">
+      <stop offset="0%" stop-color="#102b3e"/>
+      <stop offset="42%" stop-color="#05151f"/>
+      <stop offset="100%" stop-color="#000306"/>
+    </radialGradient>
+    <linearGradient id="blueLine" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#78d8ff" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#93e5ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#78d8ff" stop-opacity="0.15"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .grid { stroke: #28495a; stroke-width: 1; opacity: 0.22; }
+      .arc { fill: none; stroke: #83d8ff; stroke-width: 1.2; opacity: 0.22; }
+      .flow { fill: none; stroke: url(#blueLine); stroke-width: 5; stroke-linecap: round; }
+      .box { fill: rgba(4,18,27,0.82); stroke: #537c8d; stroke-width: 1.4; }
+      .boxHot { fill: rgba(4,23,34,0.9); stroke: #8ee4ff; stroke-width: 2; }
+      .title { font-family: Arial, Helvetica, sans-serif; fill: #e2f6ff; font-size: 46px; font-weight: 900; letter-spacing: 0; }
+      .subtitle { font-family: Arial, Helvetica, sans-serif; fill: #8bdcff; font-size: 21px; font-weight: 700; letter-spacing: 0; }
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #9fe6ff; font-size: 19px; font-weight: 900; letter-spacing: 0; }
+      .text { font-family: Arial, Helvetica, sans-serif; fill: #dceaf0; font-size: 18px; font-weight: 500; letter-spacing: 0; }
+      .small { font-family: Arial, Helvetica, sans-serif; fill: #88a9b8; font-size: 14px; font-weight: 700; letter-spacing: 0; }
+      .num { font-family: Arial, Helvetica, sans-serif; fill: #ffffff; font-size: 48px; font-weight: 900; letter-spacing: 0; }
+      .footer { font-family: Arial, Helvetica, sans-serif; fill: #739aab; font-size: 15px; font-weight: 800; letter-spacing: 0; }
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="920"/>
+  <g>
+    <path class="grid" d="M80 0v920M200 0v920M320 0v920M440 0v920M560 0v920M680 0v920M800 0v920M920 0v920M1040 0v920M1160 0v920M1280 0v920M1400 0v920M1520 0v920"/>
+    <path class="grid" d="M0 92h1600M0 184h1600M0 276h1600M0 368h1600M0 460h1600M0 552h1600M0 644h1600M0 736h1600M0 828h1600"/>
+    <circle class="arc" cx="1240" cy="240" r="160"/>
+    <circle class="arc" cx="1240" cy="240" r="250"/>
+    <circle class="arc" cx="1240" cy="240" r="340"/>
+  </g>
+
+  <text class="small" x="70" y="68">PHASE 12C / B.A.S.I.S. / HOLOSCAN PUBLIC-SAFE RUNTIME BRIDGE</text>
+  <text class="title" x="70" y="128">Recorded Biosignal State Frames Now Route Through A Runtime Bridge</text>
+  <text class="subtitle" x="72" y="166">The claim is engineering support: source adapter, timing guard, lane sinks, zero-drop receipts.</text>
+
+  <rect class="boxHot" x="70" y="235" width="285" height="142"/>
+  <text class="label" x="94" y="278">B.A.S.I.S. STATE FRAMES</text>
+  <text class="text" x="94" y="316">private raw captures held back</text>
+  <text class="text" x="94" y="347">public-safe row structure only</text>
+
+  <path class="flow" d="M370 306 C440 306,470 306,540 306"/>
+  <rect class="boxHot" x="555" y="235" width="285" height="142"/>
+  <text class="label" x="579" y="278">HOLOSCAN SOURCE</text>
+  <text class="text" x="579" y="316">recorded replay adapter</text>
+  <text class="text" x="579" y="347">1 ms source clock gate</text>
+
+  <path class="flow" d="M855 306 C925 306,955 306,1025 306"/>
+  <rect class="boxHot" x="1040" y="235" width="285" height="142"/>
+  <text class="label" x="1064" y="278">TIMING / QUALITY GUARD</text>
+  <text class="text" x="1064" y="316">sequence continuity checked</text>
+  <text class="text" x="1064" y="347">segment boundaries preserved</text>
+
+  <path class="flow" d="M1180 390 C1180 455,1180 475,1180 530"/>
+  <rect class="boxHot" x="1040" y="545" width="285" height="142"/>
+  <text class="label" x="1064" y="588">LANE SINK RECEIPT</text>
+  <text class="text" x="1064" y="626">7 lane files received</text>
+  <text class="text" x="1064" y="657">HRV / Muse / quality lanes separated</text>
+
+  <rect class="box" x="70" y="455" width="280" height="185"/>
+  <text class="label" x="94" y="498">SEGMENT BRIDGE</text>
+  <text class="num" x="94" y="560">468</text>
+  <text class="small" x="96" y="586">input/source/guard/sink rows</text>
+  <text class="text" x="94" y="620">0 drops / 0 sequence gaps</text>
+
+  <rect class="box" x="385" y="455" width="280" height="185"/>
+  <text class="label" x="409" y="498">MULTI-SEGMENT</text>
+  <text class="num" x="409" y="560">2</text>
+  <text class="small" x="411" y="586">recorded windows</text>
+  <text class="text" x="409" y="620">0 global gaps / 0 segment gaps</text>
+
+  <rect class="box" x="700" y="455" width="280" height="185"/>
+  <text class="label" x="724" y="498">PUBLIC BOUNDARY</text>
+  <text class="text" x="724" y="540">no raw biometric export</text>
+  <text class="text" x="724" y="574">no device identifiers</text>
+  <text class="text" x="724" y="608">no clinical claim inflation</text>
+
+  <rect class="box" x="70" y="710" width="1255" height="92"/>
+  <text class="label" x="94" y="750">NEST READ</text>
+  <text class="text" x="94" y="782">Nest 4 biology state rows now bridge into Nest 5 runtime routing. HRV + Muse remains support-bearing; Thermo stays sidecar until true same-clock triple closure.</text>
+
+  <line x1="70" y1="850" x2="1530" y2="850" stroke="#345d70" stroke-width="1"/>
+  <text class="footer" x="70" y="884">RENAISSANCE FIELD LITE / UNIVERSAL DATA PATTERN / RECORDED RUNTIME BRIDGE / PUBLIC-SAFE SUPPORT READ</text>
+</svg>

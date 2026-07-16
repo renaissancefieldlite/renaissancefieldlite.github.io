@@ -39,7 +39,7 @@
                 <a href="prototyping-lanes.html">Prototype Lanes</a>
             </nav>
             <div class="status-strip">
-                <span>Holoscan-ready medical lane</span>
+                <span>Holoscan bridge seated</span>
                 <span>FHIR-ready output</span>
                 <span>SMART on FHIR workflow</span>
                 <span>multimodal signal stack</span>
@@ -56,7 +56,7 @@
             <h2>Not one wearable. A hospital-facing signal layer.</h2>
             <div class="product-page-grid">
                 <ul class="stack-list">
-                    <li><strong>First live lanes</strong> - MoFit HRV/RR and Muse Athena EEG/optical/IMU prove the capture surface.</li>
+                    <li><strong>First live lanes</strong> - MoFit HRV/RR and Muse Athena EEG/optical/IMU prove the capture surface; recorded state frames now route through a Holoscan-style runtime bridge.</li>
                     <li><strong>Clinical vitals expansion</strong> - ECG, PPG/SpO2, blood pressure, respiration, sleep, temperature, posture, gait, tremor, and EDA/GSR.</li>
                     <li><strong>Metabolic and chemistry lanes</strong> - CGM/glucose, lactate, hydration/electrolytes, cortisol, sweat patches, and skin temperature.</li>
                     <li><strong>Hospital interface</strong> - normalized windows, signal quality, device context, state vectors, specialist views, and FHIR-ready exports.</li>
@@ -106,13 +106,28 @@
             </figure>
         </section>
 
+        <section class="panel proof-panel">
+            <div>
+                <p class="section-kicker">Runtime bridge</p>
+                <h2>Recorded biosignal state frames now route through source, guard, and lane sinks.</h2>
+                <p class="section-intro">
+                    The July 2026 public-safe Holoscan gate converts B.A.S.I.S. from capture-only proof into a runtime-routing surface:
+                    recorded HRV/Muse-derived state frames pass through a source adapter, timing/quality guard, and lane-separated sinks with zero drops
+                    and zero sequence gaps in the closed gate. This is engineering support, not a clinical claim.
+                </p>
+            </div>
+            <figure class="proof-frame">
+                <img src="assets/phase12c_basis_holoscan_bridge_2026-07-16.svg" alt="B.A.S.I.S. Holoscan runtime bridge public-safe visual" />
+            </figure>
+        </section>
+
         <section class="panel">
             <p class="section-kicker">NVIDIA / Holoscan fit</p>
             <h2>Low-latency medical-device streaming is the natural platform bridge.</h2>
             <div class="focus-grid">
                 <article class="focus-card">
                     <h3>Holoscan</h3>
-                    <p>Medical-device sensor/network connectivity, AI processing, and streaming pipelines from embedded to edge to cloud.</p>
+                    <p>Medical-device sensor/network connectivity, AI processing, and streaming pipelines from embedded to edge to cloud. The first recorded source / guard / sink bridge is now seated.</p>
                 </article>
                 <article class="focus-card">
                     <h3>Jetson</h3>
