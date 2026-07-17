@@ -92,6 +92,32 @@ a {
     max-width: 720px;
 }
 
+.product-hero {
+    position: relative;
+    padding-bottom: clamp(86px, 10vw, 124px);
+}
+
+.hero-signature {
+    position: absolute;
+    right: 0;
+    bottom: clamp(24px, 4vw, 42px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    border-top: 1px solid rgba(246, 241, 231, 0.22);
+    padding-top: 16px;
+    color: var(--aqua);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero-signature span:last-child {
+    color: var(--gold);
+}
+
 .eyebrow {
     margin: 0 0 12px;
     color: var(--aqua);
@@ -364,6 +390,12 @@ video {
         width: 100%;
         justify-self: stretch;
         transform: none;
+    }
+
+    .hero-signature {
+        position: static;
+        flex-direction: column;
+        margin-top: 20px;
     }
 }
 
