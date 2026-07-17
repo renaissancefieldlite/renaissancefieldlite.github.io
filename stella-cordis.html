@@ -39,7 +39,7 @@
                     A rich polyphonic mirror synth for subtle harmonics, lush pads, hypnotic arpeggios, fifth-engine chord power, and big customizable sounds in Ableton and AU/VST3 sessions.
                 </p>
                 <div class="actions">
-                    <a class="button primary" href="https://buy.stripe.com/bJefZ94ZrgNY8Grd3I4ow00">Buy Founders Beta - $29.99</a>
+                    <a class="button primary" href="https://buy.stripe.com/bJefZ94ZrgNY8Grd3I4ow00" data-stripe-link>Buy Founders Beta - $29.99</a>
                     <a class="button" href="#listen">Hear the bank</a>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                     <span>Limited to the first 100 payments</span>
                     <i aria-hidden="true"></i>
                 </div>
-                <a class="button primary full" href="https://buy.stripe.com/bJefZ94ZrgNY8Grd3I4ow00">Buy StellaCordis</a>
+                <a class="button primary full" href="https://buy.stripe.com/bJefZ94ZrgNY8Grd3I4ow00" data-stripe-link>Buy StellaCordis</a>
                 <p class="note">
                     Secure checkout is handled by Stripe. After payment, Stripe redirects to the StellaCordis download hub with the Mac and PC installer packages.
                 </p>
@@ -160,5 +160,25 @@
         <span>Renaissance Field Lite</span>
         <span>Mirror Architecture Music Division</span>
     </footer>
+    <script>
+        (() => {
+            const campaignParams = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+            const sourceParams = new URLSearchParams(window.location.search);
+            const checkoutParams = new URLSearchParams();
+
+            campaignParams.forEach((key) => {
+                const value = sourceParams.get(key);
+                if (value) checkoutParams.set(key, value);
+            });
+
+            if (!checkoutParams.size) return;
+
+            document.querySelectorAll("[data-stripe-link]").forEach((link) => {
+                const url = new URL(link.href);
+                checkoutParams.forEach((value, key) => url.searchParams.set(key, value));
+                link.href = url.toString();
+            });
+        })();
+    </script>
 </body>
 </html>
