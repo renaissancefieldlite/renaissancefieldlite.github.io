@@ -265,6 +265,44 @@ video {
     background: #020303;
 }
 
+.audit-panel {
+    display: grid;
+    gap: 12px;
+    border: 1px solid var(--line);
+    background:
+        linear-gradient(135deg, rgba(160, 255, 240, 0.12), rgba(2, 3, 3, 0.86) 42%),
+        linear-gradient(180deg, var(--panel-strong), rgba(5, 8, 8, 0.94));
+    padding: clamp(18px, 3vw, 28px);
+}
+
+.audit-panel div {
+    display: grid;
+    gap: 6px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(211, 235, 226, 0.18);
+}
+
+.audit-panel div:last-child {
+    border-bottom: 0;
+}
+
+.audit-panel span {
+    color: var(--gold);
+    font-weight: 950;
+    letter-spacing: 0.14em;
+}
+
+.audit-panel strong {
+    color: var(--text);
+    font-size: 18px;
+}
+
+.audit-panel p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
 .buy {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
