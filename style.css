@@ -641,6 +641,51 @@ body {
     min-height: 620px;
 }
 
+.press-hero h1 {
+    max-width: 13ch;
+}
+
+.press-page {
+    max-width: 980px;
+}
+
+.press-release h2 {
+    max-width: 22ch;
+}
+
+.press-summary {
+    margin: 22px 0;
+    padding: 18px 20px;
+    border-left: 3px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.045);
+    color: var(--text);
+    font-size: 1.08rem;
+}
+
+.press-link-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.press-link-list a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.press-link-list a:hover {
+    border-color: rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.06);
+}
+
 .build-week-summary,
 .video-panel,
 .build-week-showcase {
