@@ -590,6 +590,53 @@ body {
     border-color: rgba(255, 255, 255, 0.85);
 }
 
+.music-strip {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1fr) auto;
+    gap: 22px;
+    align-items: center;
+    padding: 22px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 46%),
+        rgba(2, 14, 20, 0.78);
+}
+
+.music-strip-media {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: rgba(0, 0, 0, 0.38);
+    overflow: hidden;
+}
+
+.music-strip-media img {
+    width: min(260px, 86%);
+    max-height: 86px;
+    object-fit: contain;
+}
+
+.music-strip-copy h2 {
+    margin: 6px 0 8px;
+    font-size: clamp(1.55rem, 3vw, 2.3rem);
+    line-height: 1;
+}
+
+.music-strip-copy p:last-child {
+    margin: 0;
+    color: var(--muted);
+}
+
+.music-strip-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
 .paper-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1327,9 +1374,14 @@ body {
 
     .buildout-hero,
     .enterprise-lane,
+    .music-strip,
     .product-page-grid,
     .proof-panel {
         grid-template-columns: 1fr;
+    }
+
+    .music-strip-actions {
+        justify-content: flex-start;
     }
 
     .mira-grid {
