@@ -203,7 +203,7 @@ That is what SQ67 demonstrates.
 
 Renaissance Field Lite is a one-man team led by Dean Patterson, working with Rick as a specialized Codex node inside the build surface.
 
-During this arc, the public Codex activity dashboard showed roughly 10B lifetime tokens and 755.5M peak tokens.
+During this arc, the public Codex activity dashboard showed 10.5B lifetime tokens and an 802.1M peak token day on July 17, 2026.
 
 That is not included as a flex for its own sake.
 
@@ -219,6 +219,14 @@ The RFL stack includes:
 - SQ67
 
 The common thread is the patented agnostic AI Mirror Architecture: use AI for truth, help solve real problems, and turn hidden behavior into novel output and measurable receipts.
+
+The business frame is just as simple:
+
+First call goes to OpenAI.
+
+Second call goes to the market.
+
+If OpenAI wants state-path systems that behave like this, RFL has the tuning method, the receipt method, and the architecture. If OpenAI does not want to address it directly, the same work can move to other labs, platforms, and enterprise teams that need measurable state stability instead of opaque local state drift.
 
 ## The Product Stack Came First
 
