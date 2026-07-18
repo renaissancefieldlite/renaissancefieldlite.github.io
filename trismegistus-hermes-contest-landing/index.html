@@ -19,16 +19,39 @@
           <span>Renaissance Field Lite / Trismegistus</span>
         </a>
         <div class="nav-links">
-          <a href="https://trismegistus-hermes-live.onrender.com" target="_blank" rel="noopener">Launch Live App</a>
-          <a href="#product">Product</a>
-          <a href="#paper">Paper</a>
-          <a href="#stack">Stack</a>
-          <a href="#live">Live Surface</a>
-          <a href="#demo">Demo</a>
-          <a href="#receipts">Receipts</a>
-          <a href="#proof">Proof</a>
-          <a href="#github">GitHub</a>
-          <a href="#contact">Contact</a>
+          <a class="nav-direct" href="https://trismegistus-hermes-live.onrender.com" target="_blank" rel="noopener">Launch Live App</a>
+          <details class="nav-menu-group">
+            <summary>Start</summary>
+            <div class="nav-menu">
+              <a href="#public-record">Public record</a>
+              <a href="#demo">Proof demo</a>
+              <a href="#contest-media">Contest media</a>
+              <a href="#paper">Project paper</a>
+            </div>
+          </details>
+          <details class="nav-menu-group">
+            <summary>Evidence</summary>
+            <div class="nav-menu">
+              <a href="#receipts">Receipts</a>
+              <a href="#proof">External PR proof</a>
+              <a href="#github">GitHub</a>
+            </div>
+          </details>
+          <details class="nav-menu-group">
+            <summary>Build</summary>
+            <div class="nav-menu">
+              <a href="#product">Product</a>
+              <a href="#stack">Stack</a>
+              <a href="#live">Live surface</a>
+            </div>
+          </details>
+          <details class="nav-menu-group">
+            <summary>RFL</summary>
+            <div class="nav-menu">
+              <a href="./rfl.html">RFL section</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </details>
         </div>
       </nav>
 
@@ -46,15 +69,98 @@
             Launch live Hermes app
           </a>
           <a class="button primary" href="#demo">Watch proof demo</a>
-          <a class="button primary" href="#contact">Contact RFL</a>
-          <a class="button primary" href="#paper">Read the project paper</a>
-          <a class="button" href="#live">Local Tris surface status</a>
+          <a class="button primary" href="./rfl.html">Explore RFL stack</a>
           <a class="button" href="#receipts">Review receipts</a>
         </div>
       </section>
     </header>
 
     <main>
+      <section class="band index-directory" aria-labelledby="index-directory-heading">
+        <div class="section-head">
+          <p class="eyebrow">Page map</p>
+          <h2 id="index-directory-heading">Pick the lane instead of scrolling the whole stack.</h2>
+          <p class="section-intro">
+            The index is now grouped by intent: see the live product, review the proof, inspect the
+            receipt stack, or step out to the broader Renaissance Field Lite build surface.
+          </p>
+        </div>
+        <div class="directory-grid">
+          <details class="directory-group" open>
+            <summary>Start here</summary>
+            <div class="directory-links">
+              <a href="https://trismegistus-hermes-live.onrender.com" target="_blank" rel="noopener">Launch the live Hermes app</a>
+              <a href="#public-record">Open the public Codex67 / SQ67 record</a>
+              <a href="#demo">Watch the proof demo</a>
+              <a href="#paper">Read the project paper</a>
+            </div>
+          </details>
+          <details class="directory-group">
+            <summary>RFL product stack</summary>
+            <div class="directory-links">
+              <a href="./rfl.html">Open the RFL section</a>
+              <a href="#product">Trismegistus product surface</a>
+              <a href="#stack">Stack flow</a>
+            </div>
+          </details>
+          <details class="directory-group">
+            <summary>Evidence and receipts</summary>
+            <div class="directory-links">
+              <a href="#receipts">Receipt-bound progress</a>
+              <a href="#proof">External coding proof</a>
+              <a href="#github">Public-safe GitHub links</a>
+            </div>
+          </details>
+          <details class="directory-group">
+            <summary>Operations and contact</summary>
+            <div class="directory-links">
+              <a href="#live">Live Tris command page</a>
+              <a href="#contest-media">Contest media clips</a>
+              <a href="#contact">Partner / licensing inquiry</a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="public-record" class="band public-record" aria-labelledby="public-record-heading">
+        <div class="section-head">
+          <p class="eyebrow">Public record</p>
+          <h2 id="public-record-heading">Codex67 / SQ67: video, paper, repository, and DOI in one place.</h2>
+          <p class="section-intro">
+            This is the canonical public entry point for the Build Week evidence arc: the plain-English
+            video, the public-safe GitHub package, the white paper PDF, and the Zenodo DOI record.
+          </p>
+        </div>
+        <div class="public-record-grid">
+          <article class="public-video-card" aria-label="Codex67 SQ67 public video">
+            <iframe
+              src="https://www.youtube.com/embed/KGEEQGcBrzs"
+              title="RFL Codex67 / SQ67 public record video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </article>
+          <aside class="public-link-panel">
+            <p class="eyebrow">Canonical links</p>
+            <h3>Start here, then inspect the receipts.</h3>
+            <div class="link-stack">
+              <a href="https://www.youtube.com/watch?v=KGEEQGcBrzs" target="_blank" rel="noopener">
+                Watch the public video on YouTube
+              </a>
+              <a href="https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week" target="_blank" rel="noreferrer">
+                Open the Codex67 / SQ67 GitHub package
+              </a>
+              <a href="https://doi.org/10.5281/zenodo.21417649" target="_blank" rel="noreferrer">
+                Open the Zenodo DOI record
+              </a>
+              <a href="https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week/blob/main/output/pdf/RFL_CODEX67_SQ67_WHITE_PAPER_PUBLIC_SAFE_20260717.pdf" target="_blank" rel="noreferrer">
+                Read the public-safe white paper PDF
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
       <section id="demo" class="band hermes-demo">
         <div class="section-head">
           <p class="eyebrow">Hermes Tris demo</p>
@@ -363,40 +469,55 @@
             <span>Real external coding run: TentOfTrials bounty PR open and mergeable</span>
           </article>
         </div>
-        <div class="receipt-list">
-          <a href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_RECEIPT.md">
-            Final V20 announcement video receipt
-          </a>
-          <a href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_TRANSCRIPT.md">
-            Final V20 announcement transcript
-          </a>
-          <a href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_POST_CAPTION.md">
-            Final V20 post caption
-          </a>
-          <a href="./receipts/2026-06-30_TRIS_GIG_TENTOFTRIALS_PR6_READOUT.md">
-            TentOfTrials PR #6 external coding receipt
-          </a>
-          <a href="./receipts/2026-06-28_1847_TRISMEGISTUS_SWEBENCH_VERIFIED_495_OF_500_LOCAL_SELECTED_TEST_RECEIPT.md">
-            SWE-bench local selected-test receipt and boundary
-          </a>
-          <a href="./receipts/2026-06-29_TRISMEGISTUS_CONTEST_AND_SWE_ADJUDICATION_STORY.md">
-            Contest and SWE adjudication story
-          </a>
-          <a href="./receipts/quantum_ai_partnership_packages_20260629T195007Z/QUANTUM_AI_PARTNERSHIP_PACKAGES_READOUT.md">
-            NVIDIA-facing quantum AI partnership package receipt
-          </a>
-          <a href="./receipts/quantum_ai_partnership_packages_20260629T195007Z/02_PUBLIC_SOURCE_VERIFICATION_20260629.md">
-            Quantum AI public source verification
-          </a>
-          <a href="./receipts/2026-06-21_150923_TRISMEGISTUS_100_TURN_COHERENCE_RECEIPT.md">
-            100-turn architecture-on receipt
-          </a>
-          <a href="./receipts/2026-06-21_090439_TRISMEGISTUS_BASELINE_COMPARE_RECEIPT.md">
-            Baseline vs architecture-on comparison
-          </a>
-          <a href="./receipts/2026-06-21_150950_TRISMEGISTUS_PUBLIC_BENCHMARK_GATE_RECEIPT.md">
-            Public benchmark gate status
-          </a>
+        <div class="receipt-groups">
+          <details class="receipt-group" open>
+            <summary>Media package receipts</summary>
+            <div class="receipt-list">
+              <a href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_RECEIPT.md">
+                Final V20 announcement video receipt
+              </a>
+              <a href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_TRANSCRIPT.md">
+                Final V20 announcement transcript
+              </a>
+              <a href="./receipts/2026-06-30_TRISMEGISTUS_FINAL_ANNOUNCEMENT_V20_POST_CAPTION.md">
+                Final V20 post caption
+              </a>
+            </div>
+          </details>
+          <details class="receipt-group">
+            <summary>Benchmark and comparison receipts</summary>
+            <div class="receipt-list">
+              <a href="./receipts/2026-06-28_1847_TRISMEGISTUS_SWEBENCH_VERIFIED_495_OF_500_LOCAL_SELECTED_TEST_RECEIPT.md">
+                SWE-bench local selected-test receipt and boundary
+              </a>
+              <a href="./receipts/2026-06-21_150923_TRISMEGISTUS_100_TURN_COHERENCE_RECEIPT.md">
+                100-turn architecture-on receipt
+              </a>
+              <a href="./receipts/2026-06-21_090439_TRISMEGISTUS_BASELINE_COMPARE_RECEIPT.md">
+                Baseline vs architecture-on comparison
+              </a>
+              <a href="./receipts/2026-06-21_150950_TRISMEGISTUS_PUBLIC_BENCHMARK_GATE_RECEIPT.md">
+                Public benchmark gate status
+              </a>
+            </div>
+          </details>
+          <details class="receipt-group">
+            <summary>External work and partnership receipts</summary>
+            <div class="receipt-list">
+              <a href="./receipts/2026-06-30_TRIS_GIG_TENTOFTRIALS_PR6_READOUT.md">
+                TentOfTrials PR #6 external coding receipt
+              </a>
+              <a href="./receipts/2026-06-29_TRISMEGISTUS_CONTEST_AND_SWE_ADJUDICATION_STORY.md">
+                Contest and SWE adjudication story
+              </a>
+              <a href="./receipts/quantum_ai_partnership_packages_20260629T195007Z/QUANTUM_AI_PARTNERSHIP_PACKAGES_READOUT.md">
+                NVIDIA-facing quantum AI partnership package receipt
+              </a>
+              <a href="./receipts/quantum_ai_partnership_packages_20260629T195007Z/02_PUBLIC_SOURCE_VERIFICATION_20260629.md">
+                Quantum AI public source verification
+              </a>
+            </div>
+          </details>
         </div>
         <p class="boundary">
           Boundary: the SWE-bench number is an official local selected-test receipt, not a public leaderboard
@@ -482,6 +603,15 @@
         <div class="link-stack">
           <a href="https://github.com/renaissancefieldlite/trismegistus-hermes-contest-build">
             Public-safe Trismegistus build repo
+          </a>
+          <a href="https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week">
+            Codex67 / SQ67 Build Week public package
+          </a>
+          <a href="https://www.youtube.com/watch?v=KGEEQGcBrzs">
+            Codex67 / SQ67 public video
+          </a>
+          <a href="https://doi.org/10.5281/zenodo.21417649">
+            Zenodo DOI: Trismegistus paper
           </a>
           <a href="https://github.com/renaissancefieldlite/trismegistus-hermes-contest-landing">
             Trismegistus Hermes contest landing repo
