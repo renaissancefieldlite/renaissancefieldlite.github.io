@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Public-safe Codex67 / SQ67 reviewer proof surface for OpenAI Codex Build Week: runnable code, receipt rows, benchmark table, and protected evidence boundary."
+    />
+    <meta property="og:title" content="Codex67 / SQ67 Reviewer Proof Surface" />
+    <meta
+        property="og:description"
+        content="A public-safe reviewer surface showing the runnable SQ67 receipt harness, make test output, receipt examples, benchmark table, and NDA/licensing boundary."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://renaissancefieldlite.com/codex67-sq67-reviewer-demo.html" />
+    <title>Codex67 / SQ67 Reviewer Proof Surface | Renaissance Field Lite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        :root {
+            --demo-gold: #e9c84a;
+            --demo-green: #6ca083;
+            --demo-panel: rgba(4, 17, 12, 0.88);
+            --demo-line: rgba(154, 210, 180, 0.28);
+            --demo-ink: #f5f2e8;
+            --demo-muted: #b9c4bb;
+        }
+
+        .reviewer-page {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto 80px;
+            color: var(--demo-ink);
+        }
+
+        .reviewer-hero {
+            min-height: 70vh;
+            display: grid;
+            align-items: center;
+            padding: 84px 0 52px;
+        }
+
+        .proof-label {
+            color: var(--demo-gold);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .reviewer-hero h1 {
+            max-width: 980px;
+            margin: 18px 0;
+            font-size: clamp(3.2rem, 8vw, 7.4rem);
+            line-height: 0.88;
+            letter-spacing: 0;
+        }
+
+        .reviewer-hero p {
+            max-width: 900px;
+            font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+            color: var(--demo-muted);
+            line-height: 1.55;
+        }
+
+        .proof-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .proof-card {
+            grid-column: span 6;
+            border: 1px solid var(--demo-line);
+            background: var(--demo-panel);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 18px 80px rgba(0, 0, 0, 0.22);
+        }
+
+        .proof-card.full {
+            grid-column: 1 / -1;
+        }
+
+        .proof-card h2,
+        .proof-card h3 {
+            margin: 8px 0 12px;
+            letter-spacing: 0;
+        }
+
+        .proof-card p,
+        .proof-card li {
+            color: var(--demo-muted);
+            line-height: 1.55;
+        }
+
+        .terminal {
+            overflow: auto;
+            border: 1px solid rgba(233, 200, 74, 0.26);
+            background: rgba(0, 0, 0, 0.74);
+            border-radius: 8px;
+            padding: 18px;
+            color: #e8f7eb;
+            font: 0.84rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+            white-space: pre;
+        }
+
+        .score-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            font-size: 0.95rem;
+        }
+
+        .score-table th,
+        .score-table td {
+            border-bottom: 1px solid var(--demo-line);
+            padding: 12px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .score-table th {
+            color: var(--demo-gold);
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .score-table td {
+            color: var(--demo-ink);
+        }
+
+        .boundary-list {
+            columns: 2;
+            padding-left: 20px;
+        }
+
+        .demo-footer-note {
+            margin: 28px 0 0;
+            padding: 18px;
+            border-left: 4px solid var(--demo-gold);
+            color: var(--demo-muted);
+            background: rgba(233, 200, 74, 0.07);
+        }
+
+        @media (max-width: 820px) {
+            .proof-card {
+                grid-column: 1 / -1;
+            }
+
+            .boundary-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-layer" aria-hidden="true"></div>
+    <div class="background-vignette" aria-hidden="true"></div>
+
+    <main class="reviewer-page">
+        <section class="reviewer-hero">
+            <div>
+                <p class="proof-label">OpenAI Codex Build Week / Developer Tools</p>
+                <h1>Not a story. A receipt surface.</h1>
+                <p>
+                    This page gives judges the public-safe proof path for Renaissance Field Lite Codex67 / SQ67:
+                    runnable code, expected terminal output, receipt rows, benchmark scores, and a clear boundary
+                    between public review code and protected implementation material.
+                </p>
+                <div class="proof-actions">
+                    <a class="button button-primary" href="https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week" target="_blank" rel="noreferrer">Open GitHub code</a>
+                    <a class="button button-secondary" href="https://www.youtube.com/watch?v=s1YJU8eL2es" target="_blank" rel="noreferrer">Watch public cut</a>
+                    <a class="button button-secondary" href="codex67-sq67-build-week.html">Open showcase page</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="proof-grid" aria-label="Reviewer proof cards">
+            <article class="proof-card full">
+                <p class="proof-label">Judge path</p>
+                <h2>Clone the repo and run one command.</h2>
+                <p>
+                    The public evaluator harness uses Python standard library only. It does not read private
+                    Codex state files. It demonstrates the SQ67 pattern: write marker, hash proof, recover later,
+                    score whether the evidence held.
+                </p>
+                <pre class="terminal">git clone https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week.git
+cd rfl-codex67-sq67-build-week
+make test</pre>
+            </article>
+
+            <article class="proof-card full">
+                <p class="proof-label">Fresh public clone packet</p>
+                <h2>Expected output from the public package.</h2>
+                <pre class="terminal">python3 scripts/sq67_demo.py demo --db examples/output/sq67_demo.sqlite
+OK wrote 3 receipts to examples/output/sq67_demo.sqlite
+
+python3 scripts/sq67_demo.py verify --db examples/output/sq67_demo.sqlite
+OK
+
+python3 scripts/score_receipts.py examples/sample_benchmark_rows.csv
+lane,rows,exact_rate,evidence_rate,false_recoveries,control_rejections,avg_latency_seconds,total_tokens
+SQ67 clean receipt lane,150,100.00%,100.00%,0,0,n/a,0
+SQ67 clean route,450,100.00%,100.00%,0,0,n/a,0
+Tornado N10 sealed batch,10,100.00%,100.00%,0,0,n/a,0
+Tornado second-machine sealed batch,3,100.00%,100.00%,0,0,n/a,0
+blinded carrier gate,25,100.00%,80.00%,0,5,n/a,0
+normal visible lane,150,99.33%,76.00%,0,0,n/a,0
+false recovery controls,1300,0.00%,0.00%,0,1300,n/a,0
+gpt-5.5 lane C,50,100.00%,100.00%,0,0,74.935,8421682
+gpt-5.6-sol lane C,50,76.00%,100.00%,0,0,171.111,19067794</pre>
+            </article>
+
+            <article class="proof-card">
+                <p class="proof-label">Receipt row</p>
+                <h2>What a public SQ67 receipt looks like.</h2>
+                <pre class="terminal">{
+  "nonce": "SQ67_PUBLIC_DEMO_A001",
+  "lane": "sq67_clean",
+  "task": "extract_facts",
+  "claim": "receipt writer created a durable marker",
+  "evidence": [
+    "nonce preserved",
+    "payload hash computed",
+    "receipt hash chained"
+  ],
+  "boundary": "synthetic public demo row only",
+  "next_gate": "recover by nonce"
+}</pre>
+            </article>
+
+            <article class="proof-card">
+                <p class="proof-label">Why this matters</p>
+                <h2>The demo is not the protected system. It is the review harness.</h2>
+                <p>
+                    Judges can inspect the pattern without receiving raw private state files or protected code.
+                    The public harness proves the measurement path: deterministic hashes, recoverable nonces,
+                    chain verification, scoring, and false-recovery controls.
+                </p>
+                <ul>
+                    <li>Public code: receipt writer, verifier, recovery, scorer.</li>
+                    <li>Public data: redacted sample receipts and benchmark summaries.</li>
+                    <li>Protected material: raw logs, private prompts, production integrations.</li>
+                </ul>
+            </article>
+
+            <article class="proof-card full">
+                <p class="proof-label">Benchmark scoreboard</p>
+                <h2>The public rows show the comparison clearly.</h2>
+                <table class="score-table">
+                    <thead>
+                        <tr>
+                            <th>Lane</th>
+                            <th>Rows</th>
+                            <th>Exact</th>
+                            <th>Evidence</th>
+                            <th>False recoveries</th>
+                            <th>Control rejections</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SQ67 clean receipt lane</td>
+                            <td>150</td>
+                            <td>100.00%</td>
+                            <td>100.00%</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Normal visible lane</td>
+                            <td>150</td>
+                            <td>99.33%</td>
+                            <td>76.00%</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>SQ67 clean route</td>
+                            <td>450</td>
+                            <td>100.00%</td>
+                            <td>100.00%</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>False recovery controls</td>
+                            <td>1300</td>
+                            <td>0.00%</td>
+                            <td>0.00%</td>
+                            <td>0</td>
+                            <td>1300</td>
+                        </tr>
+                        <tr>
+                            <td>Tornado second-machine sealed batch</td>
+                            <td>3</td>
+                            <td>100.00%</td>
+                            <td>100.00%</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Tornado N10 sealed batch</td>
+                            <td>10</td>
+                            <td>100.00%</td>
+                            <td>100.00%</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="proof-card full">
+                <p class="proof-label">Protected review boundary</p>
+                <h2>What judges get publicly, and what requires NDA/licensing.</h2>
+                <ul class="boundary-list">
+                    <li>Public: runnable SQ67 evaluator harness.</li>
+                    <li>Public: public-safe white paper and benchmark rows.</li>
+                    <li>Public: Zenodo DOI record and video receipt.</li>
+                    <li>Protected: raw state_5.sqlite evidence.</li>
+                    <li>Protected: raw logs_2.sqlite evidence.</li>
+                    <li>Protected: raw global state files.</li>
+                    <li>Protected: private prompts and thread IDs.</li>
+                    <li>Protected: production implementation and licensing-grade integrations.</li>
+                </ul>
+                <p class="demo-footer-note">
+                    Renaissance Field Lite's first preference is to work with OpenAI on the Codex state-layer repair.
+                    If OpenAI does not engage properly, RFL will protect and license the architecture through the
+                    broader AI market.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
