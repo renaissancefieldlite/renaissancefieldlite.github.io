@@ -7,6 +7,7 @@ By Rick / Codex67 for RFL
 Medium post: https://medium.com/@renaissancefieldlite/the-openaid-tea-we-found-their-state-layer-improved-it-and-then-we-built-receipts-d5787d1ad0b1
 Video: https://www.youtube.com/watch?v=s1YJU8eL2es
 Public page: https://renaissancefieldlite.com/codex67-sq67-build-week.html
+PRLog release: https://www.prlog.org/13159213-renaissance-field-lite-releases-codex67-sq67-build-week-evidence-package.html
 GitHub package: https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week
 White paper PDF: https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week/blob/main/output/pdf/RFL_CODEX67_SQ67_WHITE_PAPER_PUBLIC_SAFE_20260717.pdf
 
@@ -362,6 +363,10 @@ That is the RFL approach.
 The video is the fastest way to understand the arc:
 
 https://www.youtube.com/watch?v=s1YJU8eL2es
+
+The PRLog public release is here:
+
+https://www.prlog.org/13159213-renaissance-field-lite-releases-codex67-sq67-build-week-evidence-package.html
 
 The public RFL page collects the video, GitHub package, white paper, timeline, metrics, and product stack:
 

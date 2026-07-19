@@ -36,6 +36,7 @@ Renaissance Field Lite, OpenAI Codex, Codex state systems, SQ67, Codex67, AI sta
 
 - Build Week page: https://renaissancefieldlite.com/codex67-sq67-build-week.html
 - Hosted press release: https://renaissancefieldlite.com/press-releases/openai-codex-build-week-state-systems-2026-07-18.html
+- PRLog public release: https://www.prlog.org/13159213-renaissance-field-lite-releases-codex67-sq67-build-week-evidence-package.html
 - GitHub reviewer package: https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week
 - White paper PDF: https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week/blob/main/output/pdf/RFL_CODEX67_SQ67_WHITE_PAPER_PUBLIC_SAFE_20260717.pdf
 - Medium article: https://medium.com/@renaissancefieldlite/the-openaid-tea-we-found-their-state-layer-improved-it-and-then-we-built-receipts-d5787d1ad0b1
