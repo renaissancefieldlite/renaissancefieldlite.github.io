@@ -26,7 +26,7 @@ https://renaissancefieldlite.com/codex67-sq67-build-week.html
 
 ## Video URL
 
-https://www.youtube.com/watch?v=s1YJU8eL2es
+https://www.youtube.com/watch?v=puGeATnJgH0
 
 ## Keywords / Tags
 

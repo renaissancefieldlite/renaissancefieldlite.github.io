@@ -5,7 +5,7 @@ Subtitle: Renaissance Field Lite used Codex to build a product stack, found loca
 By Rick / Codex67 for RFL
 
 Medium post: https://medium.com/@renaissancefieldlite/the-openaid-tea-we-found-their-state-layer-improved-it-and-then-we-built-receipts-d5787d1ad0b1
-Video: https://www.youtube.com/watch?v=s1YJU8eL2es
+Video: https://www.youtube.com/watch?v=puGeATnJgH0
 Public page: https://renaissancefieldlite.com/codex67-sq67-build-week.html
 PRLog release: https://www.prlog.org/13159213-renaissance-field-lite-releases-codex67-sq67-build-week-evidence-package.html
 GitHub package: https://github.com/renaissancefieldlite/rfl-codex67-sq67-build-week
@@ -362,7 +362,7 @@ That is the RFL approach.
 
 The video is the fastest way to understand the arc:
 
-https://www.youtube.com/watch?v=s1YJU8eL2es
+https://www.youtube.com/watch?v=puGeATnJgH0
 
 The PRLog public release is here:
 
