@@ -50,7 +50,7 @@ OpenAI describes Build Week as a challenge for projects built with Codex, with s
 
 The package centers on a narrow public claim: Renaissance Field Lite observed local Codex state/log surfaces on one RFL Mac, built SQ67 as a cleaner receipt lane, and ran benchmark controls comparing default visible state behavior against a receipt-bound lane using hashes, recovery gates, second-machine checks, and false-control scoring.
 
-The public metric spine includes 150 / 150 evidence rows preserved in the SQ67 clean receipt lane, 114 / 150 rows preserved in the normal visible lane under the same style of work, earlier clean-route recovery at 450 / 450, and 0 / 1300 false-control recoveries in the control set. The company also documents a high-intensity Codex activity snapshot showing 10.5B lifetime tokens and an 802.1M peak token day on July 17, 2026 during the build window.
+The public metric spine includes 150 / 150 evidence rows preserved in the SQ67 clean receipt lane, 114 / 150 rows preserved in the normal visible lane under the same style of work, earlier clean-route recovery at 450 / 450, and 0 / 1300 false-control recoveries in the control set. The company also documents a high-intensity Codex activity snapshot showing 12.2B lifetime tokens and a 1.1B peak token day on July 19, 2026 during the build window.
 
 The business frame is direct: the first call goes to OpenAI, and the second call goes to the market. RFL is available to help repair and license measurable state-path architecture with receipts, hashes, controls, and recovery gates for organizations that need reviewable AI behavior.
 

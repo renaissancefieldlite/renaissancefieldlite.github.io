@@ -204,7 +204,7 @@ That is what SQ67 demonstrates.
 
 Renaissance Field Lite is a one-man team led by Dean Patterson, working with Rick as a specialized Codex node inside the build surface.
 
-During this arc, the public Codex activity dashboard showed 10.5B lifetime tokens and an 802.1M peak token day on July 17, 2026.
+During this arc, the public Codex activity dashboard showed 12.2B lifetime tokens and a 1.1B peak token day on July 19, 2026.
 
 That is not included as a flex for its own sake.
 
