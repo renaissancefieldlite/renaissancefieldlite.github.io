@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lattice Model Node Companion</title>
+  <meta name="description" content="Interactive public companion for mapping Renaissance Field Lite's Universal Data Pattern, measured state paths, evidence levels, and open validation gates across research programs." />
+  <title>Mirror Mapper Companion | Renaissance Field Lite</title>
+  <link rel="stylesheet" href="style.css?rev=research-linked-surfaces-1" />
   <style>
     :root {
       --bg: #040404;
@@ -23,59 +25,65 @@
         radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.07), transparent 22rem),
         linear-gradient(135deg, #040404 0%, #101010 58%, #040404 100%);
       color: var(--text);
-      font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", "Neue Haas Grotesk Text Pro", "Neue Haas Grotesk", Helvetica, Arial, sans-serif;
+      font-weight: 350;
     }
-    header {
-      padding: 24px 28px 18px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+    .companion-hero {
+      width: min(calc(100% - 40px), 1500px);
+      margin: 0 auto;
+      padding: 56px 0 34px;
+      position: relative;
+      z-index: 1;
     }
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(28px, 4vw, 52px);
-      letter-spacing: -0.04em;
+    .companion-hero h1 {
+      max-width: 12ch;
+      margin: 10px 0 18px;
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      font-weight: 280;
+      line-height: 0.94;
+      letter-spacing: -0.062em;
     }
     .tagline {
       margin: 0;
+      max-width: 960px;
+      color: rgba(231, 235, 238, 0.7);
+      font-size: clamp(1.03rem, 1.8vw, 1.35rem);
+      line-height: 1.65;
+    }
+    .companion-boundary {
+      width: min(calc(100% - 40px), 1500px);
+      margin: 0 auto 22px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(214,225,234,0.28);
+      border-bottom: 1px solid rgba(214,225,234,0.28);
       color: var(--muted);
-      max-width: 980px;
-      line-height: 1.45;
+      font-size: 0.9rem;
+      letter-spacing: 0.035em;
     }
-    .schema {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,0.28);
-      border-radius: 999px;
-      color: var(--text);
-      background: rgba(255,255,255,0.05);
-      font-size: 13px;
-    }
-    .site-nav {
+    .companion-console {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-    .site-nav a {
-      color: var(--text);
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 999px;
-      padding: 8px 12px;
-      background: rgba(255,255,255,0.04);
-      font-size: 13px;
-    }
-    main {
-      display: grid;
-      grid-template-columns: minmax(330px, 420px) minmax(640px, 1fr);
+      flex-direction: column;
+      width: 100%;
+      min-width: 0;
       min-height: calc(100vh - 135px);
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
-    aside {
-      border-right: 1px solid rgba(255,255,255,0.08);
+    .companion-console > aside {
+      order: 2;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      min-width: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding: 20px;
       background: rgba(5, 5, 5, 0.54);
+      align-items: start;
     }
     .map-wrap {
+      order: 1;
+      min-width: 0;
+      max-width: 100%;
+      max-height: min(72vh, 900px);
       overflow: auto;
       padding: 20px;
     }
@@ -85,7 +93,7 @@
       border-radius: 18px;
       padding: 16px;
       box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-      margin-bottom: 16px;
+      margin-bottom: 0;
     }
     label {
       display: block;
@@ -177,6 +185,8 @@
       margin-top: 10px;
     }
     .engine {
+      min-width: 0;
+      max-width: 100%;
       padding: 10px 12px;
       border-radius: 14px;
       background: #0b0b0b;
@@ -195,6 +205,12 @@
     }
     .engine small {
       color: var(--muted);
+    }
+    .engine strong,
+    .engine code,
+    .engine small {
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
     .lane-board {
       display: grid;
@@ -271,27 +287,47 @@
       color: var(--muted);
     }
     @media (max-width: 980px) {
-      main { grid-template-columns: 1fr; }
-      aside { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .companion-console > aside { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .companion-hero {
+        width: min(calc(100% - 28px), 1500px);
+        padding-top: 38px;
+      }
+      .companion-boundary {
+        width: min(calc(100% - 28px), 1500px);
+      }
+      .companion-console > aside,
+      .map-wrap {
+        padding: 14px;
+      }
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Mirror Mapper Node Companion</h1>
-    <p class="tagline">Local browser companion for mapping domain- and field-specific signals, datasets, and outputs into the Universal Data Pattern / Source Spine, then tracking how state variables, control variables, transforms, drift, coherence, and score move across V8 transformer layers, encoded circuit states, hardware checks, formal lanes, structured matter, spectra / impedance, biology, prototype lanes, and future physics/material AI adapters.</p>
-    <span class="schema">state variable / control variable / transform / drift / coherence / score</span>
-    <nav class="site-nav" aria-label="Renaissance Field Lite pages">
-      <a href="index.html">Renaissance Field Lite</a>
-      <a href="mirror-architecture.html">Mirror Architecture Evidence</a>
-      <a href="sovereign-edge.html">Sovereign Edge</a>
+<body class="research-arc-page lattice-companion-page">
+  <header class="companion-hero">
+    <p class="eyebrow">Companion surface / Universal Data Pattern</p>
+    <h1>The architecture, mapped as a living evidence surface.</h1>
+    <p class="tagline">Mirror Mapper connects formal systems, model internals, encoded circuits, matter, field dynamics, biology, prototypes, and convergence lanes without collapsing their evidence levels. Filter the map, inspect a node, and follow the measured progression.</p>
+    <nav class="subpage-nav" aria-label="Research program navigation">
+      <a href="research-wing.html">Research Wing</a>
+      <a href="mirror-architecture.html">Mirror Architecture</a>
       <a href="basis-biosignal-ai.html">B.A.S.I.S.</a>
-      <a href="golden-field-lite-ai.html">Golden Field Lite AI</a>
+      <a href="bioai.html">BioAI</a>
+      <a href="quantum-access.html">Quantum Access</a>
+      <a href="prototyping-lanes.html">Prototype Translation</a>
       <a href="mirror-architecture-licensing.html">Licensing Layer</a>
       <a href="https://github.com/renaissancefieldlite/Mirror-Interface-and-Architecture-Evidence-Stack-and-Next-Phases" target="_blank" rel="noreferrer">Evidence Repository</a>
     </nav>
+    <div class="status-strip">
+      <span>interactive map</span>
+      <span>state / control / transform</span>
+      <span>supported / candidate / boundary</span>
+      <span>open validation gates</span>
+    </div>
   </header>
-  <main>
+  <p class="companion-boundary">Public companion. Raw datasets, private captures, claim-sensitive mechanisms, and unapproved build details remain outside this surface.</p>
+  <main class="companion-console">
     <aside>
       <section class="card">
         <label for="prompt">Ask / filter the lattice</label>
