@@ -16,8 +16,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://renaissancefieldlite.com/enterprise.html" />
     <title>Enterprise — Renaissance Field Lite</title>
-    <link rel="stylesheet" href="landing.css" />
-    <script src="landing.js" defer></script>
+    <link rel="stylesheet" href="landing.css?rev=one-form-booking-1" />
+    <script src="landing.js?rev=one-form-booking-1" defer></script>
 </head>
 <body class="gateway-page enterprise-page">
     <a class="skip-link" href="#enterprise">Skip to enterprise services</a>
@@ -299,23 +299,106 @@
                     </span>
                     <span class="action-arrow" aria-hidden="true">↗</span>
                 </a>
-                <div class="enterprise-action enterprise-action--disabled" aria-disabled="true">
+                <a class="enterprise-action" href="#message-us">
                     <span class="action-index">03</span>
                     <span>
-                        <strong>SMS</strong>
-                        <small>Signup coming soon · no number collected</small>
+                        <strong>Message us</strong>
+                        <small>Send a private business inquiry</small>
                     </span>
-                    <span class="action-state">Soon</span>
-                </div>
-                <a class="enterprise-action" href="calendar/">
+                    <span class="action-arrow" aria-hidden="true">↓</span>
+                </a>
+                <a class="enterprise-action" href="#message-us">
                     <span class="action-index">04</span>
                     <span>
                         <strong>Book a call</strong>
                         <small>Find the cleanest first move</small>
                     </span>
-                    <span class="action-arrow" aria-hidden="true">↗</span>
+                    <span class="action-arrow" aria-hidden="true">↓</span>
                 </a>
             </nav>
+
+            <div class="enterprise-inquiry" id="message-us">
+                <div class="enterprise-inquiry-heading">
+                    <p class="overline">Private inquiry</p>
+                    <div>
+                        <h3>Tell us what needs to work better.</h3>
+                        <p>
+                            Give us the useful context. Freedom places the inquiry in our private
+                            Sales workspace and sends one confirmation through the reply method you choose.
+                        </p>
+                    </div>
+                </div>
+
+                <form
+                    class="enterprise-inquiry-form"
+                    data-enterprise-inquiry
+                    data-inquiry-endpoint=""
+                    novalidate
+                >
+                    <input type="hidden" name="source_page" value="https://renaissancefieldlite.com/enterprise.html" />
+                    <input type="hidden" name="submission_id" value="" />
+                    <input type="hidden" name="submitted_at" value="" />
+                    <input name="contact_consent" type="hidden" value="yes" />
+                    <input type="hidden" name="consent_version" value="inquiry-response-v1" />
+                    <label class="enterprise-inquiry-honeypot" aria-hidden="true">
+                        Leave this field empty
+                        <input name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+                    </label>
+
+                    <div class="enterprise-inquiry-grid">
+                        <label>
+                            <span>Your name</span>
+                            <input name="name" type="text" autocomplete="name" maxlength="200" required />
+                        </label>
+                        <label>
+                            <span>Business name</span>
+                            <input name="business_name" type="text" autocomplete="organization" maxlength="240" required />
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input name="email" type="email" autocomplete="email" maxlength="320" required />
+                        </label>
+                        <label>
+                            <span>Phone</span>
+                            <input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="80" required />
+                        </label>
+                        <label>
+                            <span>Preferred reply</span>
+                            <select name="preferred_reply" required>
+                                <option value="">Choose one</option>
+                                <option value="text">Text message</option>
+                                <option value="email">Email</option>
+                                <option value="phone">Voice call</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="enterprise-inquiry-message">
+                        <span>What would you like to improve or build?</span>
+                        <textarea name="message" rows="6" minlength="3" maxlength="4000" required></textarea>
+                    </label>
+
+                    <div class="enterprise-inquiry-submit">
+                        <p>
+                            Submitting this inquiry asks Renaissance Field Lite to reply through your selected channel.
+                            Inquiry response only. No marketing list. One confirmation is sent through your selected channel.
+                            Prefer text message? <a href="sms:+17192003618">Text us directly.</a>
+                        </p>
+                        <button type="submit" disabled>Send private inquiry</button>
+                    </div>
+                    <p class="enterprise-inquiry-status" data-enterprise-inquiry-status aria-live="polite">
+                        Our private RFL intake connection is being finalized. Direct email remains available.
+                    </p>
+                    <a
+                        class="enterprise-inquiry-booking"
+                        data-enterprise-booking
+                        href="https://cal.com/dean-patterson-xraeye"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                    >Choose a time for your Voice call <span aria-hidden="true">↗</span></a>
+                </form>
+            </div>
         </section>
     </main>
 

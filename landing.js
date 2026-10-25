@@ -165,8 +165,13 @@
     let entryFlashTimer = 0;
     let entryFallbackTimer = 0;
     let entryVolumeFrame = 0;
+    let entryTransitionStartMediaTime = 0;
+    let entryTransitionStartVolume = 0;
+    let entryTransitionEarliestFinish = 0;
     const entryCycleFallbackMs = 6041.667;
     const entryBaseVolume = 0.58;
+    const entryPeakVolume = 0.86;
+    const entryMinimumTransitionMs = 620;
 
     const safePlay = (video = latticeVideo) => {
         if (!video) return;
@@ -199,11 +204,24 @@
         const duration = Number.isFinite(latticeVideo.duration) && latticeVideo.duration > 0
             ? latticeVideo.duration
             : entryCycleFallbackMs / 1000;
-        const fadeInSeconds = 0.08;
-        const fadeOutSeconds = 0.62;
-        const fadeInGain = Math.min(1, latticeVideo.currentTime / fadeInSeconds);
-        const fadeOutGain = Math.min(1, Math.max(0, duration - latticeVideo.currentTime) / fadeOutSeconds);
-        latticeVideo.volume = entryBaseVolume * Math.min(fadeInGain, fadeOutGain);
+        if (entryTransitioning) {
+            const transitionSpan = Math.max(0.001, duration - entryTransitionStartMediaTime);
+            const transitionProgress = Math.min(
+                1,
+                Math.max(0, (latticeVideo.currentTime - entryTransitionStartMediaTime) / transitionSpan)
+            );
+            const crescendo = 1 - Math.pow(1 - transitionProgress, 2.2);
+            latticeVideo.volume = Math.min(
+                1,
+                entryTransitionStartVolume + (entryPeakVolume - entryTransitionStartVolume) * crescendo
+            );
+        } else {
+            const fadeInSeconds = 0.08;
+            const fadeOutSeconds = 0.62;
+            const fadeInGain = Math.min(1, latticeVideo.currentTime / fadeInSeconds);
+            const fadeOutGain = Math.min(1, Math.max(0, duration - latticeVideo.currentTime) / fadeOutSeconds);
+            latticeVideo.volume = entryBaseVolume * Math.min(fadeInGain, fadeOutGain);
+        }
         entryVolumeFrame = requestAnimationFrame(runEntryVolumeEnvelope);
     };
 
@@ -265,12 +283,15 @@
 
     const finishEntryTransition = (target) => {
         if (!entryTransitioning) return;
+        const waitForCurtainMs = Math.max(0, entryTransitionEarliestFinish - performance.now());
+        if (waitForCurtainMs > 0) {
+            window.clearTimeout(entryFallbackTimer);
+            entryFallbackTimer = window.setTimeout(() => finishEntryTransition(target), waitForCurtainMs);
+            return;
+        }
         window.clearTimeout(entryFlashTimer);
         window.clearTimeout(entryFallbackTimer);
-        document.body.classList.add("is-leaving");
-        window.setTimeout(() => {
-            window.location.href = target;
-        }, 620);
+        window.location.href = target;
     };
 
     const unlockEntryTransition = async (target) => {
@@ -289,9 +310,24 @@
             resetEntryVideos();
         }
 
+        const durationSeconds = Number.isFinite(latticeVideo.duration) && latticeVideo.duration > 0
+            ? latticeVideo.duration
+            : entryCycleFallbackMs / 1000;
+        const audibleRemainingMs = Math.max(0, (durationSeconds - latticeVideo.currentTime) * 1000);
+        const transitionMs = Math.max(entryMinimumTransitionMs, audibleRemainingMs);
+        entryTransitionStartMediaTime = continueAudiblePreview ? latticeVideo.currentTime : 0;
+        entryTransitionStartVolume = Math.max(0.12, Math.min(entryPeakVolume, latticeVideo.volume));
+        entryTransitionEarliestFinish = performance.now() + entryMinimumTransitionMs;
+        document.body.style.setProperty("--entry-transition-ms", `${Math.round(transitionMs)}ms`);
+        document.body.style.setProperty(
+            "--entry-copy-transition-ms",
+            `${Math.round(Math.min(1400, Math.max(520, transitionMs * 0.32)))}ms`
+        );
+        document.body.classList.add("is-leaving");
+
         latticeVideo.loop = false;
         latticeVideo.muted = false;
-        latticeVideo.volume = entryBaseVolume;
+        latticeVideo.volume = entryTransitionStartVolume;
         if (latticeObjectVideo) {
             latticeObjectVideo.loop = true;
             latticeObjectVideo.muted = true;
@@ -308,20 +344,20 @@
         }
         safePlay(latticeObjectVideo);
 
-        const durationSeconds = Number.isFinite(latticeVideo.duration) && latticeVideo.duration > 0
-            ? latticeVideo.duration
-            : entryCycleFallbackMs / 1000;
-        const remainingMs = Math.max(480, (durationSeconds - latticeVideo.currentTime) * 1000);
+        const remainingMs = entryPreviewSounding
+            ? Math.max(entryMinimumTransitionMs, (durationSeconds - latticeVideo.currentTime) * 1000)
+            : entryMinimumTransitionMs;
+        document.body.style.setProperty("--entry-transition-ms", `${Math.round(remainingMs)}ms`);
         entryFlashTimer = window.setTimeout(() => {
             document.body.classList.add("entry-final-flash");
         }, Math.max(0, remainingMs - 980));
         entryFallbackTimer = window.setTimeout(() => {
             finishEntryTransition(target);
-        }, remainingMs + 450);
+        }, remainingMs + 120);
         latticeVideo.addEventListener("ended", () => finishEntryTransition(target), { once: true });
 
         if (entryAnnouncer) {
-            entryAnnouncer.textContent = "Entry transition active. The complete sound and lattice sequence will finish before Page 2 opens.";
+            entryAnnouncer.textContent = "Entry transition active. Page 2 is opening while the complete sound and lattice sequence finishes.";
         }
     };
 
@@ -360,6 +396,165 @@
             } else if (entryPreviewActive || entryTransitioning) {
                 safePlay();
                 safePlay(latticeObjectVideo);
+            }
+        });
+    }
+
+    const inquiryForm = document.querySelector("[data-enterprise-inquiry]");
+    if (inquiryForm) {
+        const inquiryStatus = inquiryForm.querySelector("[data-enterprise-inquiry-status]");
+        const inquiryBooking = inquiryForm.querySelector("[data-enterprise-booking]");
+        const inquirySubmit = inquiryForm.querySelector('button[type="submit"]');
+        const submissionIdInput = inquiryForm.elements.namedItem("submission_id");
+        const submittedAtInput = inquiryForm.elements.namedItem("submitted_at");
+        const endpointValue = String(inquiryForm.dataset.inquiryEndpoint || "").trim();
+        const approvedEndpoint = "https://intake.renaissancefieldlite.com/v1/inquiries";
+        const approvedBookingUrl = "https://cal.com/dean-patterson-xraeye";
+        let endpoint = null;
+        let submitting = false;
+
+        const setInquiryStatus = (message, state = "") => {
+            inquiryStatus.textContent = message;
+            if (state) inquiryStatus.dataset.state = state;
+            else delete inquiryStatus.dataset.state;
+        };
+
+        const setBookingLink = (receipt = {}) => {
+            const bookingUrl = String(receipt.booking_url || "").trim();
+            const ready = (
+                receipt.acknowledgement_state === "booking_ready" &&
+                receipt.booking_provider === "Cal Video" &&
+                bookingUrl === approvedBookingUrl
+            );
+            inquiryBooking.hidden = !ready;
+            inquiryBooking.href = ready ? approvedBookingUrl : approvedBookingUrl;
+        };
+
+        const inquiryReceipt = (payload, receipt = {}) => {
+            const firstName = String(payload.name || "there").trim().split(/\s+/)[0] || "there";
+            const business = String(payload.business_name || "your business").trim();
+            const channel = String(receipt.acknowledgement_channel || payload.preferred_reply || "").trim();
+            const acknowledgementState = String(receipt.acknowledgement_state || "not_required").trim();
+            const methodLabels = {
+                text: "text",
+                email: "email",
+                phone: "Voice call",
+            };
+            const method = methodLabels[channel] || "your selected channel";
+            if (channel === "phone" && acknowledgementState === "booking_ready") {
+                return `Thanks, ${firstName}. We received your message for ${business}. Choose a time below for a Cal Video Voice call. No callback or outbound call was created, and (719) 200-3618 remains a text-only line.`;
+            }
+            if (acknowledgementState === "sent") {
+                const continueCopy = channel === "text"
+                    ? "You can reply to that text anytime to continue the conversation."
+                    : channel === "email"
+                        ? "You can reply to that email anytime to continue the conversation."
+                        : "";
+                return `Thanks, ${firstName}. We received your message for ${business} and sent your confirmation by ${method}. Our team will follow up as soon as we're available. ${continueCopy}`.trim();
+            }
+            return `Thanks, ${firstName}. We received your message for ${business}. The ${method} confirmation could not be delivered, but your inquiry is safely in our Sales workspace. To start the conversation, text our text-only line at (719) 200-3618 and mention ${business}.`;
+        };
+
+        const newSubmissionId = () => {
+            if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+            return `rfl-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+        };
+
+        const resetSubmissionIdentity = () => {
+            submissionIdInput.value = newSubmissionId();
+            submittedAtInput.value = "";
+        };
+
+        try {
+            const candidate = new URL(endpointValue);
+            if (
+                candidate.protocol === "https:" &&
+                candidate.hostname === "intake.renaissancefieldlite.com" &&
+                candidate.pathname === "/v1/inquiries" &&
+                candidate.href === approvedEndpoint
+            ) {
+                endpoint = candidate.href;
+            }
+        } catch (_error) {
+            endpoint = null;
+        }
+
+        resetSubmissionIdentity();
+        inquirySubmit.disabled = !endpoint;
+        if (endpoint) {
+            setInquiryStatus("Ready for a private inquiry. A person reviews every message before responding.");
+        }
+
+        inquiryForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            if (submitting || !endpoint) {
+                setInquiryStatus(
+                    "Secure message connection is being finalized. Please use the direct email link for now.",
+                    "error"
+                );
+                return;
+            }
+            if (!inquiryForm.reportValidity()) return;
+            const formData = new FormData(inquiryForm);
+            if (String(formData.get("_gotcha") || "").trim()) {
+                setInquiryStatus("We could not accept that submission.", "error");
+                return;
+            }
+
+            submittedAtInput.value = new Date().toISOString();
+            const payload = {
+                schema: "rfl-website-inquiry-v1",
+                name: String(formData.get("name") || "").trim(),
+                business_name: String(formData.get("business_name") || "").trim(),
+                email: String(formData.get("email") || "").trim(),
+                phone: String(formData.get("phone") || "").trim(),
+                preferred_reply: String(formData.get("preferred_reply") || "").trim(),
+                message: String(formData.get("message") || "").trim(),
+                contact_consent: formData.get("contact_consent") === "yes",
+                consent_version: String(formData.get("consent_version") || "inquiry-response-v1"),
+                source_page: String(formData.get("source_page") || ""),
+                submission_id: submissionIdInput.value,
+                submitted_at: submittedAtInput.value,
+                honeypot: "",
+            };
+            submitting = true;
+            inquirySubmit.disabled = true;
+            inquirySubmit.textContent = "Sending…";
+            setBookingLink();
+            setInquiryStatus("Sending the private inquiry…");
+            try {
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                });
+                if (response.status === 429) {
+                    setInquiryStatus(
+                        "The secure relay is receiving too many requests. Please wait a few minutes and try again, or use the direct email link.",
+                        "error"
+                    );
+                    return;
+                }
+                if (!response.ok) throw new Error("rfl_intake_rejected");
+                const receipt = await response.json();
+                const successMessage = inquiryReceipt(payload, receipt);
+                inquiryForm.reset();
+                resetSubmissionIdentity();
+                setInquiryStatus(successMessage, "success");
+                setBookingLink(receipt);
+            } catch (_error) {
+                setBookingLink();
+                setInquiryStatus(
+                    "The message did not leave this page. Please use the direct email link or try again.",
+                    "error"
+                );
+            } finally {
+                submitting = false;
+                inquirySubmit.disabled = !endpoint;
+                inquirySubmit.textContent = "Send private inquiry";
             }
         });
     }
