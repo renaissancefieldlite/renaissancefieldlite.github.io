@@ -78,9 +78,16 @@ def test_enterprise_booking_and_message_us_share_one_tailored_form() -> None:
 
 def test_enterprise_uses_text_message_wording_and_direct_text_link() -> None:
     assert '<option value="text">Text message</option>' in HTML
+    assert 'Prefer email?' in HTML
+    assert (
+        'href="mailto:info@renaissancefieldlite.com?subject=Enterprise%20AI%20inquiry"'
+        in HTML
+    )
+    assert '>Email us directly at info@renaissancefieldlite.com.</a>' in HTML
     assert 'Prefer text message?' in HTML
     assert 'href="sms:+17192003618"' in HTML
     assert '>Text us directly.</a>' in HTML
+    assert 'If no text app opens, use (719) 200-3618.' in HTML
     assert 'Prefer SMS?' not in HTML
 
 

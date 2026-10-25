@@ -1543,6 +1543,15 @@ a.enterprise-action[href="#services"]:focus-visible .action-arrow {
     color: rgba(230, 235, 237, 0.76);
 }
 
+.enterprise-inquiry-disclosure,
+.enterprise-inquiry-direct {
+    display: block;
+}
+
+.enterprise-inquiry-direct {
+    margin-top: 0.32rem;
+}
+
 .enterprise-inquiry-submit button {
     min-width: 12rem;
     padding: 0.9rem 1.1rem;
