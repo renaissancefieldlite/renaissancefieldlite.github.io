@@ -32,6 +32,17 @@ def test_enterprise_inquiry_keeps_the_visible_form_lean_and_consent_bound() -> N
     assert 'name="subject"' not in HTML
 
 
+def test_enterprise_inquiry_introduction_names_our_ai_freedom() -> None:
+    normalized_html = " ".join(HTML.split())
+    assert (
+        "Give us the useful context. Our AI Freedom places the inquiry in our private "
+        "Sales workspace and sends one confirmation through the reply method you choose."
+        in normalized_html
+    )
+    assert "Leave this field empty" in HTML
+    assert 'class="enterprise-inquiry-honeypot" aria-hidden="true"' in HTML
+
+
 def test_enterprise_inquiry_is_fail_closed_until_the_first_party_endpoint_is_approved() -> None:
     assert 'data-inquiry-endpoint=""' in HTML
     assert '<button type="submit" disabled>Send private inquiry</button>' in HTML
